@@ -1,0 +1,98 @@
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a href="[[ROOT]]index.html" class="logo" aria-label="Flipick Home">
+        <img src="[[ROOT]]assets/images/Flipick.png" alt="Flipick" width="120" height="34">
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="[[ROOT]]index.html" data-navlink="home">Home</a>
+        <a href="[[ROOT]]pages/how-it-works.html" data-navlink="how-it-works">How it works</a>
+        <div class="nav-dropdown">
+          <a href="[[ROOT]]pages/solutions.html" class="nav-dd-trigger" data-navlink="solutions-overview">
+            Solutions
+            <svg class="nav-dd-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M1.5 3.5L5 7L8.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="nav-dd-menu">
+            <a href="[[ROOT]]pages/AI-video-platform.html" data-navlink="solutions" class="nav-dd-item">
+              <span class="nav-dd-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="1" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <rect x="9" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <rect x="1" y="9" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <rect x="9" y="9" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span class="nav-dd-text">
+                <strong>AI Video Platform</strong>
+                <em>Cinematic video · use cases</em>
+              </span>
+            </a>
+            <a href="[[ROOT]]pages/lms.html" data-navlink="lms" class="nav-dd-item">
+              <span class="nav-dd-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="1" y="2" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M5.5 15h5M8 12v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="nav-dd-text">
+                <strong>LMS</strong>
+                <em>AI-powered learning platform</em>
+              </span>
+            </a>
+            <a href="[[ROOT]]pages/ppt-to-scorm.html" data-navlink="ppt-to-scorm" class="nav-dd-item">
+              <span class="nav-dd-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="1" y="2" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M7 6l3 2-3 2V6z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="nav-dd-text">
+                <strong>PowerPoint &rarr; SCORM</strong>
+                <em>Turn slides into courses</em>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="[[ROOT]]pages/pricing.html" data-navlink="pricing">Pricing</a>
+        <a href="[[ROOT]]pages/company.html" data-navlink="company">Company</a>
+      </nav>
+      <div class="actions">
+        <a href="#" class="login" style="display:none">Log in</a>
+        <a data-demo-link href="https://calendly.com/amol-chandsarkar/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Book a demo</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        &#9776;
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile navigation drawer -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mn-head">
+    <a href="[[ROOT]]index.html" class="logo" aria-label="Flipick Home">
+      <img src="[[ROOT]]assets/images/Flipick.png" alt="Flipick" width="100" height="28">
+    </a>
+    <button class="mn-close" id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
+  </div>
+  <nav aria-label="Mobile main navigation">
+    <a href="[[ROOT]]index.html" data-mobilenavlink="home">Home</a>
+    <a href="[[ROOT]]pages/how-it-works.html" data-mobilenavlink="how-it-works">How it works</a>
+    <div class="mn-dropdown">
+      <a href="[[ROOT]]pages/solutions.html" class="mn-dd-trigger" data-mobilenavlink="solutions-overview" style="pointer-events:auto;cursor:pointer">Solutions</a>
+      <div class="mn-dd-sub">
+        <a href="[[ROOT]]pages/AI-video-platform.html" data-mobilenavlink="solutions">AI Video Platform</a>
+        <a href="[[ROOT]]pages/lms.html" data-mobilenavlink="lms">LMS</a>
+        <a href="[[ROOT]]pages/ppt-to-scorm.html" data-mobilenavlink="ppt-to-scorm">PowerPoint &rarr; SCORM</a>
+      </div>
+    </div>
+    <a href="[[ROOT]]pages/pricing.html" data-mobilenavlink="pricing">Pricing</a>
+    <a href="[[ROOT]]pages/company.html" data-mobilenavlink="company">Company</a>
+  </nav>
+  <div class="mn-actions">
+    <a href="#" class="btn btn-outline" style="display:none">Log in</a>
+    <a data-demo-link href="https://calendly.com/amol-chandsarkar/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Book a demo</a>
+  </div>
+</div>

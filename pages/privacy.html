@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Flipick</title>
+  <meta name="description" content="Flipick Privacy Policy — how we collect, use, share and protect personal data when you use our websites and Service.">
+  <link rel="canonical" href="https://flipick.com/pages/privacy.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flipick.com/pages/privacy.html">
+  <meta property="og:title" content="Privacy Policy | Flipick">
+  <meta property="og:description" content="Flipick Privacy Policy — how we collect, use, share and protect personal data when you use our websites and Service.">
+  <meta property="og:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy | Flipick">
+  <meta name="twitter:description" content="Flipick Privacy Policy — how we collect, use, share and protect personal data when you use our websites and Service.">
+  <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <style>
+    .legal-layout { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
+    .legal-toc { position: sticky; top: 96px; }
+    .legal-toc h5 { font: 700 11px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--brand); margin-bottom: 18px; }
+    .legal-toc ol { list-style: none; counter-reset: toc; }
+    .legal-toc ol li { counter-increment: toc; margin-bottom: 2px; }
+    .legal-toc ol li a { display: block; font: 500 13px var(--body); color: var(--ink-soft); padding: 5px 8px; border-radius: 6px; border-left: 2px solid transparent; transition: all .18s; line-height: 1.4; }
+    .legal-toc ol li a:hover { color: var(--brand); background: var(--brand-soft); border-left-color: var(--brand); }
+    .legal-toc ol li a.toc-active { color: var(--brand); background: var(--brand-soft); border-left-color: var(--brand); font-weight: 600; }
+    .legal-toc ol li a::before { content: counter(toc) ". "; font-weight: 700; color: var(--brand); }
+
+    .legal-body { min-width: 0; }
+    .legal-section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+    .legal-section:first-child { padding-top: 0; }
+    .legal-section:last-child { border-bottom: none; }
+    .legal-section .sec-num { font: 700 11px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--brand); margin-bottom: 10px; }
+    .legal-section h2 { font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 18px; letter-spacing: -.02em; }
+    .legal-section p { font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 14px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul, .legal-section ol.body-list { padding-left: 22px; margin: 14px 0; }
+    .legal-section ul li, .legal-section ol.body-list li { font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 8px; }
+    .legal-section ul li::marker { color: var(--brand); }
+    .legal-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+    .legal-role-card { background: var(--brand-soft); border: 1px solid var(--brand-mid); border-radius: 14px; padding: 20px 22px; }
+    .legal-role-card .rc-label { font: 700 11px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--brand); margin-bottom: 8px; }
+    .legal-role-card h4 { font: 700 16px var(--disp); color: var(--ink); margin-bottom: 6px; }
+    .legal-role-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin: 0; }
+    .legal-data-list { display: grid; gap: 10px; margin: 16px 0; }
+    .legal-data-item { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+    .legal-data-item .di-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--brand-soft); color: var(--brand); display: flex; align-items: center; justify-content: center; font: 700 13px var(--body); flex-shrink: 0; }
+    .legal-data-item .di-text { }
+    .legal-data-item .di-title { font: 700 14px var(--body); color: var(--ink); margin-bottom: 2px; }
+    .legal-data-item .di-desc { font: 400 14px var(--body); color: var(--ink-soft); line-height: 1.5; }
+    .legal-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+    .legal-meta-item .lm-label { font: 700 11px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+    .legal-meta-item .lm-val { font: 600 15px var(--body); color: var(--ink); }
+    .legal-other-link { display: inline-flex; align-items: center; gap: 8px; background: var(--brand-soft); border: 1px solid var(--brand-mid); border-radius: 10px; padding: 12px 20px; font: 600 14px var(--body); color: var(--brand); transition: all .2s; margin-top: 8px; }
+    .legal-other-link:hover { background: var(--brand); color: #fff; }
+    .legal-other-link::after { content: "→"; }
+    .legal-highlight { background: var(--brand-soft); border-left: 3px solid var(--brand); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0; font-size: 15px; color: var(--ink); line-height: 1.65; }
+
+    @media (max-width: 860px) {
+      .legal-layout { grid-template-columns: 1fr; gap: 0; }
+      .legal-toc { position: static; background: var(--brand-soft); border: 1px solid var(--brand-mid); border-radius: 14px; padding: 22px 24px; margin-bottom: 40px; }
+      .legal-toc ol { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+      .legal-roles { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      .legal-toc ol { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="legal">
+
+<div id="header-placeholder"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="padding-top:60px;padding-bottom:48px">
+  <div class="wrap">
+    <div style="max-width:760px">
+      <span class="eyebrow">Legal</span>
+      <h1 style="font-size:clamp(36px,4.8vw,56px);margin-top:14px">Privacy <span class="serif-i" style="color:var(--brand-mid)">Policy</span></h1>
+      <p class="sub" style="font-size:17px;margin-bottom:28px">This Policy explains how Flipick collects, uses, shares and protects personal data when you use our websites and Service. We comply with the DPDP Act, 2023 and, where applicable, the EU/UK GDPR.</p>
+      <a href="terms.html" class="btn btn-ghost" style="font-size:14px;padding:10px 22px">View Terms of Service &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section style="background:#fff;border-top:1px solid var(--line);padding:72px 0 80px">
+  <div class="wrap">
+    <div class="legal-layout">
+
+      <!-- Table of Contents -->
+      <aside class="legal-toc" aria-label="Table of contents">
+        <h5>Sections</h5>
+        <ol>
+          <li><a href="#pp-1">Our Roles</a></li>
+          <li><a href="#pp-2">Data We Collect</a></li>
+          <li><a href="#pp-3">How We Use Data</a></li>
+          <li><a href="#pp-4">Legal Bases</a></li>
+          <li><a href="#pp-5">AI Processing</a></li>
+          <li><a href="#pp-6">Sharing</a></li>
+          <li><a href="#pp-7">International Transfers</a></li>
+          <li><a href="#pp-8">Data Retention</a></li>
+          <li><a href="#pp-9">Security</a></li>
+          <li><a href="#pp-10">Your Rights</a></li>
+          <li><a href="#pp-11">Children</a></li>
+          <li><a href="#pp-12">Cookies</a></li>
+          <li><a href="#pp-13">Contact</a></li>
+          <li><a href="#pp-14">Changes</a></li>
+        </ol>
+      </aside>
+
+      <!-- Body -->
+      <div class="legal-body">
+
+        <!-- Meta -->
+        <div class="legal-meta">
+          <div class="legal-meta-item">
+            <div class="lm-label">Effective date</div>
+            <div class="lm-val">24 June 2026</div>
+          </div>
+          <div class="legal-meta-item">
+            <div class="lm-label">Version</div>
+            <div class="lm-val">1.0</div>
+          </div>
+          <div class="legal-meta-item">
+            <div class="lm-label">Compliance</div>
+            <div class="lm-val">DPDP Act 2023 · EU/UK GDPR</div>
+          </div>
+          <div class="legal-meta-item">
+            <div class="lm-label">Also read</div>
+            <div class="lm-val"><a href="terms.html" style="color:var(--brand);font-weight:600">Terms of Service &rarr;</a></div>
+          </div>
+        </div>
+
+        <!-- 1. Roles -->
+        <div class="legal-section" id="pp-1">
+          <div class="sec-num">Section 01</div>
+          <h2>Our roles</h2>
+          <p>For personal data of our own users (account holders and website visitors), Flipick is the controller / Data Fiduciary. For Recipient Data that Customers upload to personalize and distribute video, the Customer is the controller / Data Fiduciary and Flipick acts as a processor / Data Processor on the Customer's instructions.</p>
+          <div class="legal-roles">
+            <div class="legal-role-card">
+              <div class="rc-label">Flipick users</div>
+              <h4>Flipick is the controller</h4>
+              <p>We determine how account and usage data is processed for account holders and website visitors.</p>
+            </div>
+            <div class="legal-role-card">
+              <div class="rc-label">Recipient Data</div>
+              <h4>Customer is the controller</h4>
+              <p>You control Recipient Data. Flipick processes it only on your documented instructions to provide the Service.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Data Collected -->
+        <div class="legal-section" id="pp-2">
+          <div class="sec-num">Section 02</div>
+          <h2>Personal data we collect</h2>
+          <div class="legal-data-list">
+            <div class="legal-data-item">
+              <div class="di-icon">A</div>
+              <div class="di-text">
+                <div class="di-title">Account &amp; business data</div>
+                <div class="di-desc">Name, work email, company, role and billing details.</div>
+              </div>
+            </div>
+            <div class="legal-data-item">
+              <div class="di-icon">C</div>
+              <div class="di-text">
+                <div class="di-title">Customer Content</div>
+                <div class="di-desc">Briefs, scripts, brand assets, images, audio and Asset Library Elements, which may include images or voices of individuals you have rights to use.</div>
+              </div>
+            </div>
+            <div class="legal-data-item">
+              <div class="di-icon">R</div>
+              <div class="di-text">
+                <div class="di-title">Recipient Data</div>
+                <div class="di-desc">Names and personalization fields, and contact identifiers such as email addresses and phone/WhatsApp numbers, plus delivery and viewing status.</div>
+              </div>
+            </div>
+            <div class="legal-data-item">
+              <div class="di-icon">V</div>
+              <div class="di-text">
+                <div class="di-title">Viewer &amp; authentication data</div>
+                <div class="di-desc">Information used to verify a viewer's identity before playback, and engagement analytics (views, completion, clicks).</div>
+              </div>
+            </div>
+            <div class="legal-data-item">
+              <div class="di-icon">U</div>
+              <div class="di-text">
+                <div class="di-title">Usage, device &amp; log data</div>
+                <div class="di-desc">IP address, browser and device information, actions taken, and cookies or similar technologies.</div>
+              </div>
+            </div>
+            <div class="legal-data-item">
+              <div class="di-icon">P</div>
+              <div class="di-text">
+                <div class="di-title">Payment data</div>
+                <div class="di-desc">Processed by our payment provider; we do not store full card numbers.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. How We Use -->
+        <div class="legal-section" id="pp-3">
+          <div class="sec-num">Section 03</div>
+          <h2>How we use personal data</h2>
+          <ul>
+            <li>Provide, operate and secure the Service;</li>
+            <li>Generate, personalize and deliver video, and produce proof analytics;</li>
+            <li>Verify viewers where authentication is enabled;</li>
+            <li>Manage billing, accounts and support;</li>
+            <li>Prevent fraud and abuse, and comply with legal obligations; and</li>
+            <li>Troubleshoot and improve the Service.</li>
+          </ul>
+          <div class="legal-highlight"><strong>AI training:</strong> We do not use Customer Content or Recipient Data to train generative AI models except within your own tenant.</div>
+        </div>
+
+        <!-- 4. Legal Bases -->
+        <div class="legal-section" id="pp-4">
+          <div class="sec-num">Section 04</div>
+          <h2>Legal bases</h2>
+          <p>We process personal data on one or more lawful bases: your consent; performance of a contract; compliance with legal obligations; and our legitimate interests (such as securing and improving the Service). Under the DPDP Act, we process personal data for lawful purposes with your consent or other permitted legitimate uses.</p>
+        </div>
+
+        <!-- 5. AI Processing -->
+        <div class="legal-section" id="pp-5">
+          <div class="sec-num">Section 05</div>
+          <h2>How AI processing works</h2>
+          <p>Generated Output is produced by AI models from your inputs. Inputs are processed to create your output. Generated Output may not be unique and should be reviewed before use.</p>
+        </div>
+
+        <!-- 6. Sharing -->
+        <div class="legal-section" id="pp-6">
+          <div class="sec-num">Section 06</div>
+          <h2>Sharing and sub-processors</h2>
+          <p>We share personal data with:</p>
+          <ul>
+            <li>Service providers acting on our behalf (cloud hosting, AI model providers, messaging/email/WhatsApp delivery, analytics, and payment);</li>
+            <li>Customers (for Recipient Data they control);</li>
+            <li>Authorities where required by law; and</li>
+            <li>Parties to a corporate transaction.</li>
+          </ul>
+          <p>We require processors to protect personal data. A current list of sub-processors is available on request.</p>
+        </div>
+
+        <!-- 7. International Transfers -->
+        <div class="legal-section" id="pp-7">
+          <div class="sec-num">Section 07</div>
+          <h2>International transfers</h2>
+          <p>We may process data outside your country. Where required, we apply appropriate safeguards for such transfers in accordance with applicable data-protection law.</p>
+        </div>
+
+        <!-- 8. Retention -->
+        <div class="legal-section" id="pp-8">
+          <div class="sec-num">Section 08</div>
+          <h2>Data retention</h2>
+          <p>We retain personal data for as long as needed to provide the Service and for legitimate or legal purposes, after which we delete or anonymise it. Recipient Data is retained per the Customer's instructions.</p>
+        </div>
+
+        <!-- 9. Security -->
+        <div class="legal-section" id="pp-9">
+          <div class="sec-num">Section 09</div>
+          <h2>Security</h2>
+          <p>We use technical and organisational measures such as encryption in transit and at rest, access controls and monitoring. No method of transmission or storage is completely secure.</p>
+        </div>
+
+        <!-- 10. Rights -->
+        <div class="legal-section" id="pp-10">
+          <div class="sec-num">Section 10</div>
+          <h2>Your rights</h2>
+          <p>Subject to applicable law, you may request access to, correction, completion, updating or erasure of your personal data, withdraw consent, and raise a grievance. The DPDP Act also provides a right to nominate; the GDPR additionally provides rights to portability and to object.</p>
+          <p>To exercise your rights, contact <a href="mailto:privacy@flipick.com" style="color:var(--brand);font-weight:600">privacy@flipick.com</a>.</p>
+          <div class="legal-highlight">If you are a Recipient, please contact the Customer who sent you the video (the controller); we will assist them in responding to your request.</div>
+        </div>
+
+        <!-- 11. Children -->
+        <div class="legal-section" id="pp-11">
+          <div class="sec-num">Section 11</div>
+          <h2>Children</h2>
+          <p>The Service is not directed to children under 18 (or the age of majority in your jurisdiction), and we do not knowingly collect children's personal data.</p>
+        </div>
+
+        <!-- 12. Cookies -->
+        <div class="legal-section" id="pp-12">
+          <div class="sec-num">Section 12</div>
+          <h2>Cookies</h2>
+          <p>We use cookies and similar technologies for functionality, security and analytics. You can manage cookies through your browser settings.</p>
+        </div>
+
+        <!-- 13. Contact -->
+        <div class="legal-section" id="pp-13">
+          <div class="sec-num">Section 13</div>
+          <h2>Grievance officer and contact</h2>
+          <p>For data-protection queries and to exercise your rights, contact our Grievance Officer:</p>
+          <p><a href="mailto:privacy@flipick.com" style="color:var(--brand);font-weight:600">privacy@flipick.com</a><br>Flipick, Pune, India</p>
+          <a href="terms.html" class="legal-other-link">Read our Terms of Service</a>
+        </div>
+
+        <!-- 14. Changes -->
+        <div class="legal-section" id="pp-14">
+          <div class="sec-num">Section 14</div>
+          <h2>Changes to this Policy</h2>
+          <p>We may update this Policy. We will post the updated version with a new effective date and, where required, notify you.</p>
+        </div>
+
+      </div><!-- /legal-body -->
+    </div><!-- /legal-layout -->
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA ================= -->
+<section class="closing">
+  <div class="wrap">
+    <h2>Ready to make video <span class="serif-i">that does its job?</span></h2>
+    <p>Bring a brief and watch Flipick take it from screenplay to a measured campaign.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-ghost" data-demo-link href="https://calendly.com/amol-chandsarkar/" target="_blank" rel="noopener noreferrer">Book a demo</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/includes.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+  (function() {
+    var sections = document.querySelectorAll('.legal-section[id]');
+    var links = document.querySelectorAll('.legal-toc a');
+    function onScroll() {
+      var scrollY = window.scrollY + 120;
+      var active = null;
+      sections.forEach(function(s) {
+        if (s.offsetTop <= scrollY) active = s.id;
+      });
+      links.forEach(function(a) {
+        a.classList.toggle('toc-active', a.getAttribute('href') === '#' + active);
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+</body>
+</html>

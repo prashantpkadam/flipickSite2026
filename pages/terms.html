@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | Flipick</title>
+  <meta name="description" content="Flipick Terms of Service — governing your access to and use of the Flipick platform, websites and services.">
+  <link rel="canonical" href="https://flipick.com/pages/terms.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flipick.com/pages/terms.html">
+  <meta property="og:title" content="Terms of Service | Flipick">
+  <meta property="og:description" content="Flipick Terms of Service — governing your access to and use of the Flipick platform, websites and services.">
+  <meta property="og:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service | Flipick">
+  <meta name="twitter:description" content="Flipick Terms of Service — governing your access to and use of the Flipick platform, websites and services.">
+  <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <style>
+    .legal-layout { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
+    .legal-toc { position: sticky; top: 96px; }
+    .legal-toc h5 { font: 700 11px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--brand); margin-bottom: 18px; }
+    .legal-toc ol { list-style: none; counter-reset: toc; }
+    .legal-toc ol li { counter-increment: toc; margin-bottom: 2px; }
+    .legal-toc ol li a { display: block; font: 500 13px var(--body); color: var(--ink-soft); padding: 5px 8px; border-radius: 6px; border-left: 2px solid transparent; transition: all .18s; line-height: 1.4; }
+    .legal-toc ol li a:hover { color: var(--brand); background: var(--brand-soft); border-left-color: var(--brand); }
+    .legal-toc ol li a.toc-active { color: var(--brand); background: var(--brand-soft); border-left-color: var(--brand); font-weight: 600; }
+    .legal-toc ol li a::before { content: counter(toc) ". "; font-weight: 700; color: var(--brand); }
+
+    .legal-body { min-width: 0; }
+    .legal-section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+    .legal-section:first-child { padding-top: 0; }
+    .legal-section:last-child { border-bottom: none; }
+    .legal-section .sec-num { font: 700 11px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--brand); margin-bottom: 10px; }
+    .legal-section h2 { font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 18px; letter-spacing: -.02em; }
+    .legal-section p { font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 14px; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul, .legal-section ol { padding-left: 22px; margin: 14px 0; }
+    .legal-section ul li, .legal-section ol li { font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 8px; }
+    .legal-section ul li::marker { color: var(--brand); }
+    .legal-defs { background: var(--brand-soft); border: 1px solid var(--brand-mid); border-radius: 14px; padding: 24px 28px; margin: 18px 0; }
+    .legal-defs dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; }
+    .legal-defs dt { font: 700 15px var(--body); color: var(--brand-deep); padding-top: 2px; white-space: nowrap; }
+    .legal-defs dd { font-size: 15px; color: var(--ink-soft); line-height: 1.65; margin: 0; }
+    .legal-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+    .legal-meta-item { }
+    .legal-meta-item .lm-label { font: 700 11px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+    .legal-meta-item .lm-val { font: 600 15px var(--body); color: var(--ink); }
+    .legal-other-link { display: inline-flex; align-items: center; gap: 8px; background: var(--brand-soft); border: 1px solid var(--brand-mid); border-radius: 10px; padding: 12px 20px; font: 600 14px var(--body); color: var(--brand); transition: all .2s; margin-top: 8px; }
+    .legal-other-link:hover { background: var(--brand); color: #fff; }
+    .legal-other-link::after { content: "→"; }
+
+    @media (max-width: 860px) {
+      .legal-layout { grid-template-columns: 1fr; gap: 0; }
+      .legal-toc { position: static; background: var(--brand-soft); border: 1px solid var(--brand-mid); border-radius: 14px; padding: 22px 24px; margin-bottom: 40px; }
+      .legal-toc ol { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    }
+    @media (max-width: 540px) {
+      .legal-toc ol { grid-template-columns: 1fr; }
+      .legal-defs dl { grid-template-columns: 1fr; gap: 0; }
+      .legal-defs dt { margin-top: 12px; }
+      .legal-defs dt:first-child { margin-top: 0; }
+    }
+  </style>
+</head>
+<body data-page="legal">
+
+<div id="header-placeholder"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="padding-top:60px;padding-bottom:48px">
+  <div class="wrap">
+    <div style="max-width:760px">
+      <span class="eyebrow">Legal</span>
+      <h1 style="font-size:clamp(36px,4.8vw,56px);margin-top:14px">Terms of <span class="serif-i" style="color:var(--brand-mid)">Service</span></h1>
+      <p class="sub" style="font-size:17px;margin-bottom:28px">These Terms govern your access to and use of the Flipick platform, websites and services. Please read them carefully before using the Service.</p>
+      <a href="privacy.html" class="btn btn-ghost" style="font-size:14px;padding:10px 22px">View Privacy Policy &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section style="background:#fff;border-top:1px solid var(--line);padding:72px 0 80px">
+  <div class="wrap">
+    <div class="legal-layout">
+
+      <!-- Table of Contents -->
+      <aside class="legal-toc" aria-label="Table of contents">
+        <h5>Sections</h5>
+        <ol>
+          <li><a href="#tos-1">Agreement</a></li>
+          <li><a href="#tos-2">Definitions</a></li>
+          <li><a href="#tos-3">Eligibility</a></li>
+          <li><a href="#tos-4">Service &amp; Licence</a></li>
+          <li><a href="#tos-5">Credits &amp; Billing</a></li>
+          <li><a href="#tos-6">Your Content</a></li>
+          <li><a href="#tos-7">Generated Output</a></li>
+          <li><a href="#tos-8">Acceptable Use</a></li>
+          <li><a href="#tos-9">Personalization</a></li>
+          <li><a href="#tos-10">Third Parties</a></li>
+          <li><a href="#tos-11">Confidentiality</a></li>
+          <li><a href="#tos-12">Warranties</a></li>
+          <li><a href="#tos-13">Liability</a></li>
+          <li><a href="#tos-14">Indemnification</a></li>
+          <li><a href="#tos-15">Termination</a></li>
+          <li><a href="#tos-16">Changes</a></li>
+          <li><a href="#tos-17">Governing Law</a></li>
+          <li><a href="#tos-18">Miscellaneous</a></li>
+          <li><a href="#tos-19">Contact</a></li>
+        </ol>
+      </aside>
+
+      <!-- Body -->
+      <div class="legal-body">
+
+        <!-- Meta -->
+        <div class="legal-meta">
+          <div class="legal-meta-item">
+            <div class="lm-label">Effective date</div>
+            <div class="lm-val">24 June 2026</div>
+          </div>
+          <div class="legal-meta-item">
+            <div class="lm-label">Version</div>
+            <div class="lm-val">1.0</div>
+          </div>
+          <div class="legal-meta-item">
+            <div class="lm-label">Also read</div>
+            <div class="lm-val"><a href="privacy.html" style="color:var(--brand);font-weight:600">Privacy Policy &rarr;</a></div>
+          </div>
+        </div>
+
+        <!-- 1. Agreement -->
+        <div class="legal-section" id="tos-1">
+          <div class="sec-num">Section 01</div>
+          <h2>Agreement and acceptance</h2>
+          <p>These Terms of Service ("Terms") govern your access to and use of the Flipick platform, websites and services (the "Service") operated by Flipick ("Flipick", "we", "us"). By creating an account, purchasing Credits or using the Service, you ("Customer", "you") agree to these Terms. If you use the Service on behalf of an organisation, you confirm you are authorised to bind it.</p>
+        </div>
+
+        <!-- 2. Definitions -->
+        <div class="legal-section" id="tos-2">
+          <div class="sec-num">Section 02</div>
+          <h2>Definitions</h2>
+          <div class="legal-defs">
+            <dl>
+              <dt>Service / Platform</dt>
+              <dd>The Flipick websites, application and related services.</dd>
+              <dt>Credits</dt>
+              <dd>The prepaid unit of usage. Unless otherwise stated in an order, 1 Credit = ₹1.</dd>
+              <dt>Customer Content</dt>
+              <dd>Briefs, scripts, brand assets, images, audio, data and other materials you provide.</dd>
+              <dt>Asset Library Elements</dt>
+              <dd>Characters, products, locations and other references you create or upload.</dd>
+              <dt>Generated Output</dt>
+              <dd>Videos and related assets the Service produces from your inputs.</dd>
+              <dt>Recipient</dt>
+              <dd>An individual to whom you distribute video.</dd>
+              <dt>Recipient Data</dt>
+              <dd>Personal data about Recipients you provide for personalization or distribution (e.g., name, email, phone/WhatsApp number).</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- 3. Eligibility -->
+        <div class="legal-section" id="tos-3">
+          <div class="sec-num">Section 03</div>
+          <h2>Eligibility and accounts</h2>
+          <p>You must be at least 18 and able to form a binding contract. You are responsible for your account credentials and for all activity under your account, must keep them secure, and must notify us promptly of any unauthorised use.</p>
+        </div>
+
+        <!-- 4. Service -->
+        <div class="legal-section" id="tos-4">
+          <div class="sec-num">Section 04</div>
+          <h2>The Service and licence to use</h2>
+          <p>Subject to these Terms and payment of applicable Credits, Flipick grants you a non-exclusive, non-transferable, revocable right to access and use the Service for your internal business purposes. We may update, improve or change features of the Service from time to time.</p>
+        </div>
+
+        <!-- 5. Credits -->
+        <div class="legal-section" id="tos-5">
+          <div class="sec-num">Section 05</div>
+          <h2>Credits, pricing, billing and taxes</h2>
+          <p>The Service is priced in Credits. Unless otherwise agreed, 1 Credit = ₹1. Video creation is charged per finished minute by edit complexity, and distribution is charged per Recipient by volume band, per the then-current rate card.</p>
+          <p>Credits are purchased in advance and consumed when you generate or distribute video. Credits are non-refundable except where required by law.</p>
+          <p>Fees are exclusive of taxes; you are responsible for applicable taxes (e.g., GST). We may change pricing prospectively; changes do not affect Credits already purchased.</p>
+        </div>
+
+        <!-- 6. Customer Content -->
+        <div class="legal-section" id="tos-6">
+          <div class="sec-num">Section 06</div>
+          <h2>Customer Content and your responsibilities</h2>
+          <p>You retain ownership of your Customer Content. You grant Flipick a worldwide, royalty-free licence to host, process, reproduce and modify your Customer Content solely to provide and support the Service (including generating, personalizing and delivering Generated Output).</p>
+          <p>You represent and warrant that you hold all rights, consents and licences necessary for your Customer Content and its use in the Service — including rights to brand assets, trademarks, products, music, and the name, image, likeness and voice of any real person depicted or referenced (including brand ambassadors, presenters and employees).</p>
+          <p>You are solely responsible for the lawfulness of your Customer Content and Recipient Data.</p>
+        </div>
+
+        <!-- 7. Generated Output -->
+        <div class="legal-section" id="tos-7">
+          <div class="sec-num">Section 07</div>
+          <h2>Generated Output and intellectual property</h2>
+          <p>As between you and Flipick, and subject to your payment of applicable Credits and any third-party rights in underlying models, you own the Generated Output you create and may use it for your lawful business purposes.</p>
+          <p>Flipick and its licensors retain all rights in the Service, platform, software, models and templates. No rights are granted except as expressly stated.</p>
+          <p>Because of the nature of generative AI, Generated Output may not be unique, and similar output may be produced for others. You are responsible for reviewing Generated Output before use.</p>
+        </div>
+
+        <!-- 8. Acceptable Use -->
+        <div class="legal-section" id="tos-8">
+          <div class="sec-num">Section 08</div>
+          <h2>Acceptable use</h2>
+          <p>You must not use the Service to:</p>
+          <ul>
+            <li>violate any law or any third party's rights;</li>
+            <li>create or distribute content that is unlawful, infringing, defamatory, deceptive, harassing, hateful or otherwise harmful;</li>
+            <li>depict or imitate the name, face, likeness or voice of any real person without their verifiable consent, or create deceptive "deepfake" content;</li>
+            <li>create any content that sexualizes or exploits minors;</li>
+            <li>impersonate others, or present Generated Output as unedited footage of real events;</li>
+            <li>upload malware, or attempt to breach or test the security of the Service;</li>
+            <li>reverse engineer, resell or sublicense the Service except as permitted; or</li>
+            <li>contact Recipients without a lawful basis and required consents, including compliance with anti-spam laws and messaging-platform policies (for example, WhatsApp Business policies).</li>
+          </ul>
+        </div>
+
+        <!-- 9. Personalization -->
+        <div class="legal-section" id="tos-9">
+          <div class="sec-num">Section 09</div>
+          <h2>Personalization, distribution and data roles</h2>
+          <p>You may provide Recipient Data to personalize and distribute video. As between the parties, you are the controller / Data Fiduciary of Recipient Data and Flipick acts as your processor / Data Processor, processing it on your documented instructions to provide the Service. Our Privacy Policy and Data Processing Addendum govern this processing.</p>
+          <p>You are responsible for providing all notices to, and obtaining all consents from, Recipients required for personalization, delivery (e.g., email, WhatsApp) and analytics, and for honouring their rights and opt-outs.</p>
+        </div>
+
+        <!-- 10. Third-party -->
+        <div class="legal-section" id="tos-10">
+          <div class="sec-num">Section 10</div>
+          <h2>Third-party services</h2>
+          <p>The Service integrates third-party services (for example, cloud hosting, AI model providers, messaging/email delivery and payment processing). Your use may be subject to their terms, and we are not responsible for third-party services.</p>
+        </div>
+
+        <!-- 11. Confidentiality -->
+        <div class="legal-section" id="tos-11">
+          <div class="sec-num">Section 11</div>
+          <h2>Confidentiality</h2>
+          <p>Each party may receive confidential information of the other. The receiving party will use it only to perform under these Terms and will protect it with reasonable care, except where disclosure is required by law.</p>
+        </div>
+
+        <!-- 12. Warranties -->
+        <div class="legal-section" id="tos-12">
+          <div class="sec-num">Section 12</div>
+          <h2>Warranties and disclaimers</h2>
+          <p>The Service and Generated Output are provided "as is" and "as available", without warranties of any kind to the maximum extent permitted by law. AI-generated output may be inaccurate, incomplete or unexpected, and you are responsible for reviewing and verifying it before use. We do not warrant that the Service will be uninterrupted or error-free.</p>
+        </div>
+
+        <!-- 13. Limitation -->
+        <div class="legal-section" id="tos-13">
+          <div class="sec-num">Section 13</div>
+          <h2>Limitation of liability</h2>
+          <p>To the maximum extent permitted by law, Flipick will not be liable for any indirect, incidental, special, consequential or punitive damages, or loss of profits, data or goodwill. Flipick's total aggregate liability arising out of or relating to the Service will not exceed the amounts you paid to Flipick in the 12 months before the claim.</p>
+        </div>
+
+        <!-- 14. Indemnification -->
+        <div class="legal-section" id="tos-14">
+          <div class="sec-num">Section 14</div>
+          <h2>Indemnification</h2>
+          <p>You will indemnify and hold Flipick harmless from claims, damages and costs arising out of your Customer Content, Recipient Data, Generated Output, or your use of the Service in breach of these Terms or applicable law.</p>
+        </div>
+
+        <!-- 15. Term -->
+        <div class="legal-section" id="tos-15">
+          <div class="sec-num">Section 15</div>
+          <h2>Term, suspension and termination</h2>
+          <p>These Terms apply while you use the Service. Either party may terminate as set out here or in an applicable order.</p>
+          <p>We may suspend or limit the Service for breach, non-payment, suspected unlawful use, or security or legal reasons.</p>
+          <p>On termination, your right to use the Service ends. Unused Credits are handled per our refund policy.</p>
+        </div>
+
+        <!-- 16. Changes -->
+        <div class="legal-section" id="tos-16">
+          <div class="sec-num">Section 16</div>
+          <h2>Changes to these Terms</h2>
+          <p>We may update these Terms. We will notify you of material changes, and your continued use of the Service after changes take effect constitutes acceptance.</p>
+        </div>
+
+        <!-- 17. Governing Law -->
+        <div class="legal-section" id="tos-17">
+          <div class="sec-num">Section 17</div>
+          <h2>Governing law and disputes</h2>
+          <p>These Terms are governed by the laws of India, without regard to conflict-of-laws rules. The courts at Pune, Maharashtra will have exclusive jurisdiction, subject to any agreed arbitration under the Arbitration and Conciliation Act, 1996, with seat at Pune.</p>
+        </div>
+
+        <!-- 18. Misc -->
+        <div class="legal-section" id="tos-18">
+          <div class="sec-num">Section 18</div>
+          <h2>Miscellaneous</h2>
+          <p>You may not assign these Terms without our consent; we may assign them in connection with a merger or sale. Neither party is liable for events beyond its reasonable control (force majeure). If any provision is unenforceable, the rest remains in effect. Our failure to enforce a provision is not a waiver. These Terms are the entire agreement between the parties regarding the Service. Notices will be sent to the contact details on file.</p>
+        </div>
+
+        <!-- 19. Contact -->
+        <div class="legal-section" id="tos-19">
+          <div class="sec-num">Section 19</div>
+          <h2>Contact</h2>
+          <p>Flipick, Pune, India.</p>
+          <p><a href="mailto:legal@flipick.com" style="color:var(--brand);font-weight:600">legal@flipick.com</a> &nbsp;&middot;&nbsp; <a href="../index.html" style="color:var(--brand);font-weight:600">flipick.com</a></p>
+          <a href="privacy.html" class="legal-other-link">Read our Privacy Policy</a>
+        </div>
+
+      </div><!-- /legal-body -->
+    </div><!-- /legal-layout -->
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA ================= -->
+<section class="closing">
+  <div class="wrap">
+    <h2>Ready to make video <span class="serif-i">that does its job?</span></h2>
+    <p>Bring a brief and watch Flipick take it from screenplay to a measured campaign.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-ghost" data-demo-link href="https://calendly.com/amol-chandsarkar/" target="_blank" rel="noopener noreferrer">Book a demo</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/includes.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>
+  // Highlight active ToC item on scroll
+  (function() {
+    var sections = document.querySelectorAll('.legal-section[id]');
+    var links = document.querySelectorAll('.legal-toc a');
+    function onScroll() {
+      var scrollY = window.scrollY + 120;
+      var active = null;
+      sections.forEach(function(s) {
+        if (s.offsetTop <= scrollY) active = s.id;
+      });
+      links.forEach(function(a) {
+        a.classList.toggle('toc-active', a.getAttribute('href') === '#' + active);
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+</body>
+</html>
