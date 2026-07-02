@@ -15,6 +15,8 @@
   <meta name="twitter:title" content="Solutions &amp; Use Cases | Flipick">
   <meta name="twitter:description" content="Flipick for every team, content type and industry — L&D, marketing and customer education; training, ads, film and explainers; manufacturing, retail, BFSI, F&B and software.">
   <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +37,11 @@
         "name": "Solutions & Use Cases | Flipick",
         "description": "Flipick for every team, content type and industry — L&D, marketing and customer education; training, ads, film and explainers; manufacturing, retail, BFSI, F&B and software.",
         "isPartOf": {"@id": "https://flipick.com/#website"},
-        "breadcrumb": {"@id": "https://flipick.com/pages/AI-video-platform.html#breadcrumb"}
+        "breadcrumb": {"@id": "https://flipick.com/pages/AI-video-platform.html#breadcrumb"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero .sub"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -63,7 +69,53 @@
             "unitText": "per finished minute (base rate)"
           }
         },
-        "provider": {"@id": "https://flipick.com/#organization"}
+        "provider": {"@id": "https://flipick.com/#organization"},
+        "featureList": ["Screenplay Creator and storyboard approval", "Consistent characters and products across scenes", "Brand overlays — logos, prices, captions, CTAs", "Variable Video Production (VVP) personalisation", "Multilingual localisation without re-recording", "Authenticated viewer tracking and CTA analytics", "Credit-based pricing — 1 credit = ₹1"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Flipick AI Video Platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Flipick is a studio-grade AI video creation platform that lets L&D, marketing and customer teams create, personalise and prove video end to end — from a single pipeline that covers every content type and industry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which teams use Flipick?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "L&D and training teams ship multilingual, assessable courses; marketing teams produce on-brand ads and promos at calendar speed; and customer education teams send personalised walkthroughs and onboarding videos — all from the same platform."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of video can I create?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Training videos (structured, multilingual, assessable), ads and promos (campaign-ready, re-skinnable), narrative films (consistent cast across scenes), and explainer videos (clear how-tos with tracked next steps)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which industries does Flipick serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Manufacturing (safety and SOP training), retail (frontline onboarding and promos), BFSI (compliance with audit-ready tracking), food and beverage (franchise training), software (product launches and explainers), and healthcare (compliance and patient education)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Flipick personalise videos at scale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Flipick delivers a unique version of each video per recipient using variable data fields — names, products, prices and offers swap automatically without re-rendering. Every view is authenticated, so you get verified completion data, not just view counts."
+            }
+          }
+        ]
       }
     ]
   }
@@ -73,12 +125,14 @@
 
 <div id="header-placeholder"></div>
 
+<main>
+
 <!-- ================= HERO ================= -->
 <section class="hero" style="padding-top:60px;padding-bottom:60px">
   <div class="wrap">
     <div class="hero-grid" style="max-width:900px">
       <h1 style="font-size:clamp(38px,5.4vw,60px)">Three ways in. <span class="serif-i" style="color:var(--brand-mid)">One platform.</span></h1>
-      <p class="sub">However you come to Flipick — by the team you lead, the kind of video you make, or the industry you're in — every path runs the same create &rarr; distribute &rarr; prove pipeline.</p>
+      <p class="sub"><strong>The Flipick AI Video Platform is a studio-grade video creation tool for L&amp;D, marketing and customer teams that covers the full create &rarr; distribute &rarr; prove pipeline.</strong> However you come to Flipick &mdash; by the team you lead, the kind of video you make, or the industry you&rsquo;re in &mdash; every path runs on one platform.</p>
       <div class="ways">
         <a href="#by-team">By team</a>
         <a href="#by-content">By content type</a>
@@ -94,14 +148,14 @@
     <div class="logostrip logostrip-lg rv">
       <div class="lbl">Trusted by teams at</div>
       <div class="logorow">
-        <div class="logoslot"><img src="../assets/images/customers/IIBF_logo.jpg" alt="Pearson" loading="lazy"></div>
+        <div class="logoslot"><img src="../assets/images/customers/IIBF_logo.jpg" alt="IIBF" loading="lazy"></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= BY TEAM ================= -->
-<section id="by-team" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
+<section id="by-team" aria-label="Solutions by team" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">By team</span>
@@ -153,7 +207,7 @@
 </section>
 
 <!-- ================= BY CONTENT TYPE ================= -->
-<section id="by-content" style="padding:74px 0">
+<section id="by-content" aria-label="Solutions by content type" style="padding:74px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">By content type</span>
@@ -192,7 +246,7 @@
 </section>
 
 <!-- ================= BY INDUSTRY ================= -->
-<section id="by-industry" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
+<section id="by-industry" aria-label="Solutions by industry" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">By industry</span>
@@ -232,8 +286,40 @@
   </div>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section class="faq-section" aria-label="Frequently asked questions" style="padding:64px 0">
+  <div class="lwrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h2>Common questions about <span class="serif-i text-brand">Flipick's AI Video Platform.</span></h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq">
+        <summary>What is the Flipick AI Video Platform?</summary>
+        <p>Flipick is a studio-grade AI video creation platform that lets L&amp;D, marketing and customer teams create, personalise and prove video end to end &mdash; from a single pipeline that covers every content type and industry.</p>
+      </details>
+      <details class="faq">
+        <summary>Which teams use Flipick?</summary>
+        <p>L&amp;D and training teams ship multilingual, assessable courses; marketing teams produce on-brand ads and promos at calendar speed; and customer education teams send personalised walkthroughs and onboarding videos &mdash; all from the same platform.</p>
+      </details>
+      <details class="faq">
+        <summary>What types of video can I create?</summary>
+        <p>Training videos (structured, multilingual, assessable), ads and promos (campaign-ready, re-skinnable), narrative films (consistent cast across scenes), and explainer videos (clear how-tos with tracked next steps).</p>
+      </details>
+      <details class="faq">
+        <summary>Which industries does Flipick serve?</summary>
+        <p>Manufacturing (safety and SOP training), retail (frontline onboarding and promos), BFSI (compliance with audit-ready tracking), food and beverage (franchise training), software (product launches and explainers), and healthcare (compliance and patient education).</p>
+      </details>
+      <details class="faq">
+        <summary>How does Flipick personalise videos at scale?</summary>
+        <p>Flipick delivers a unique version of each video per recipient using variable data fields &mdash; names, products, prices and offers swap automatically without re-rendering. Every view is authenticated, so you get verified completion data, not just view counts.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>Whichever way you start, <span class="serif-i">you finish with proof.</span></h2>
     <p>Tell us your team, your content or your industry — we'll show you the fastest path to your first video.</p>
@@ -242,6 +328,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 

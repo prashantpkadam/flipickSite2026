@@ -15,6 +15,8 @@
   <meta name="twitter:title" content="Company &amp; Contact | Flipick">
   <meta name="twitter:description" content="About Flipick, our security approach, careers, and how to get in touch. Existing Flipick LMS customers can sign in here too.">
   <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,13 +31,17 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
+        "@type": ["WebPage", "ContactPage"],
         "@id": "https://flipick.com/pages/company.html",
         "url": "https://flipick.com/pages/company.html",
         "name": "Company & Contact | Flipick",
         "description": "About Flipick, our security approach, careers, and how to get in touch. Existing Flipick LMS customers can sign in here too.",
         "isPartOf": {"@id": "https://flipick.com/#website"},
-        "breadcrumb": {"@id": "https://flipick.com/pages/company.html#breadcrumb"}
+        "breadcrumb": {"@id": "https://flipick.com/pages/company.html#breadcrumb"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero .sub", ".lede"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -64,6 +70,27 @@
           "addressLocality": "Pune",
           "addressRegion": "Maharashtra",
           "addressCountry": "IN"
+        },
+        "email": "sales@flipick.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "sales@flipick.com",
+            "url": "https://flipick.com/pages/company.html#contact"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@flipick.com",
+            "url": "https://flipick.com/pages/company.html#contact"
+          }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "18:00"
         }
       }
     ]
@@ -74,8 +101,10 @@
 
 <div id="header-placeholder"></div>
 
+<main>
+
 <!-- ================= HERO ================= -->
-<section class="hero" style="padding-top:60px;padding-bottom:36px">
+<section class="hero" aria-label="About Flipick" style="padding-top:60px;padding-bottom:36px">
   <div class="wrap">
     <div class="hero-grid" style="max-width:900px">
       <h1 style="font-size:clamp(38px,5.4vw,60px)">Video should do its job &#8212; <span class="serif-i" style="color:var(--brand-mid)">and prove it.</span></h1>
@@ -89,7 +118,7 @@
 </section>
 
 <!-- ================= ABOUT / OUR STORY ================= -->
-<section id="about" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
+<section id="about" aria-label="Our story and milestones" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Our story</span>
@@ -111,13 +140,13 @@
     <div class="rv" style="margin-top:48px">
       <p class="tl-head">Milestones</p>
       <div class="timeline">
-        <div class="tl"><div class="yr">2011</div><div class="bd"><h4>Flipick Founded</h4><p>Established with a vision to transform education from passive studying to meaningful learning.</p></div></div>
-        <div class="tl"><div class="yr">2013</div><div class="bd"><h4>Industry Recognition</h4><p>Honored for developing one of the industry's most innovative solutions for automated InDesign-to-ePub conversion.</p></div></div>
-        <div class="tl"><div class="yr">2014</div><div class="bd"><h4>Launch of Flipick LMS</h4><p>Organizations began delivering, managing, and tracking learning experiences on the Flipick platform.</p></div></div>
-        <div class="tl"><div class="yr">2015</div><div class="bd"><h4>Leading the Shift from Adobe Flash</h4><p>Introduced tools to migrate and modernize learning content, converting over 500 hours of Adobe Flash content into interactive HTML5 experiences.</p></div></div>
-        <div class="tl"><div class="yr">2024</div><div class="bd"><h4>Launch of the AI Video Platform</h4><p>Expanded beyond learning management with a studio-grade AI video platform for content creation, personalized delivery, and measurable outcomes.</p></div></div>
-        <div class="tl"><div class="yr">2025</div><div class="bd"><h4>Flipick LMS G2 — Next Generation Learning Platform</h4><p>Reimagined the LMS with integrated AI capabilities, skills frameworks, and enhanced learner experiences.</p></div></div>
-        <div class="tl now"><div class="yr">Today</div><div class="bd"><h4>Create &rarr; distribute &rarr; prove</h4><p>An end-to-end AI-powered learning and content ecosystem—helping organizations create engaging content, deliver it at scale, and demonstrate measurable impact.</p></div></div>
+        <div class="tl"><time class="yr" datetime="2011">2011</time><div class="bd"><h4>Flipick Founded</h4><p>Established with a vision to transform education from passive studying to meaningful learning.</p></div></div>
+        <div class="tl"><time class="yr" datetime="2013">2013</time><div class="bd"><h4>Industry Recognition</h4><p>Honored for developing one of the industry's most innovative solutions for automated InDesign-to-ePub conversion.</p></div></div>
+        <div class="tl"><time class="yr" datetime="2014">2014</time><div class="bd"><h4>Launch of Flipick LMS</h4><p>Organizations began delivering, managing, and tracking learning experiences on the Flipick platform.</p></div></div>
+        <div class="tl"><time class="yr" datetime="2015">2015</time><div class="bd"><h4>Leading the Shift from Adobe Flash</h4><p>Introduced tools to migrate and modernize learning content, converting over 500 hours of Adobe Flash content into interactive HTML5 experiences.</p></div></div>
+        <div class="tl"><time class="yr" datetime="2024">2024</time><div class="bd"><h4>Launch of the AI Video Platform</h4><p>Expanded beyond learning management with a studio-grade AI video platform for content creation, personalized delivery, and measurable outcomes.</p></div></div>
+        <div class="tl"><time class="yr" datetime="2025">2025</time><div class="bd"><h4>Flipick LMS G2 &mdash; Next Generation Learning Platform</h4><p>Reimagined the LMS with integrated AI capabilities, skills frameworks, and enhanced learner experiences.</p></div></div>
+        <div class="tl now"><time class="yr" datetime="2026">Today</time><div class="bd"><h4>Create &rarr; distribute &rarr; prove</h4><p>An end-to-end AI-powered learning and content ecosystem&mdash;helping organizations create engaging content, deliver it at scale, and demonstrate measurable impact.</p></div></div>
       </div>
     </div>
 
@@ -131,7 +160,7 @@
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" style="padding:74px 0">
+<section id="contact" aria-label="Contact Flipick" style="padding:74px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Contact</span>
@@ -224,7 +253,7 @@
 </section>
 
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>Rather just <span class="serif-i">see it?</span></h2>
     <p>Book a demo and we'll take one of your briefs from screenplay to a measured campaign.</p>
@@ -233,6 +262,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 

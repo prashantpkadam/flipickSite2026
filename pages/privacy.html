@@ -23,6 +23,36 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://flipick.com/pages/privacy.html",
+        "url": "https://flipick.com/pages/privacy.html",
+        "name": "Privacy Policy | Flipick",
+        "description": "Flipick Privacy Policy — how we collect, use, share and protect personal data when you use our websites and Service.",
+        "isPartOf": {"@id": "https://flipick.com/#website"},
+        "breadcrumb": {"@id": "https://flipick.com/pages/privacy.html#breadcrumb"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".legal-body > p:first-of-type"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://flipick.com/pages/privacy.html#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flipick.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://flipick.com/pages/privacy.html"}
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
     .legal-layout { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
     .legal-toc { position: sticky; top: 96px; }
@@ -78,6 +108,8 @@
 <body data-page="legal">
 
 <div id="header-placeholder"></div>
+
+<main>
 
 <!-- ================= HERO ================= -->
 <section class="hero" style="padding-top:60px;padding-bottom:48px">
@@ -318,7 +350,7 @@
 </section>
 
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>Ready to make video <span class="serif-i">that does its job?</span></h2>
     <p>Bring a brief and watch Flipick take it from screenplay to a measured campaign.</p>
@@ -327,6 +359,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 

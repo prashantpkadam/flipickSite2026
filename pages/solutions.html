@@ -15,6 +15,8 @@
   <meta name="twitter:title" content="Solutions | Flipick — AI Video, LMS &amp; PowerPoint to SCORM">
   <meta name="twitter:description" content="Flipick builds AI across three products: an AI video studio for marketing and L&D, a full skills-development platform, and a pipeline that converts your existing slides into deployable courses.">
   <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +37,11 @@
         "name": "Solutions | Flipick — AI Video, LMS & PowerPoint to SCORM",
         "description": "Flipick builds AI across three products: an AI video studio for marketing and L&D, a full skills-development platform, and a pipeline that converts your existing slides into deployable courses.",
         "isPartOf": {"@id": "https://flipick.com/#website"},
-        "breadcrumb": {"@id": "https://flipick.com/pages/solutions.html#breadcrumb"}
+        "breadcrumb": {"@id": "https://flipick.com/pages/solutions.html#breadcrumb"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero .sub"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -43,6 +49,35 @@
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flipick.com/"},
           {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://flipick.com/pages/solutions.html"}
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Flipick Solutions",
+        "description": "Three AI-powered products for enterprise learning and video.",
+        "numberOfItems": 3,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "AI Video Platform",
+            "description": "Studio-grade AI video creation for marketing, L&D and customer teams — create, personalise and prove video end to end.",
+            "url": "https://flipick.com/pages/AI-video-platform.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Flipick LMS G2",
+            "description": "AI skills-development platform covering the full learning lifecycle — content creation, engagement, adaptive assessment and analytics.",
+            "url": "https://flipick.com/pages/lms.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "PowerPoint to SCORM",
+            "description": "Convert existing PowerPoint decks into fully animated, narrated, assessed, SCORM-ready eLearning courses in approximately 15 days.",
+            "url": "https://flipick.com/pages/ppt-to-scorm.html"
+          }
         ]
       }
     ]
@@ -52,6 +87,8 @@
 <body data-page="solutions-overview">
 
 <div id="header-placeholder"></div>
+
+<main>
 
 <!-- ================= HERO ================= -->
 <section class="hero" style="padding-top:58px;padding-bottom:26px">
@@ -174,7 +211,7 @@
 </section>
 
 <!-- ================= NOT SURE WHICH FITS? ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>Not sure which fits? <span class="serif-i">Let&rsquo;s figure it out together.</span></h2>
     <p>Tell us the outcome you&rsquo;re after &mdash; on-brand video at scale, a smarter LMS, or converting a backlog of decks &mdash; and we&rsquo;ll map the right Flipick solution to it.</p>
@@ -183,6 +220,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 

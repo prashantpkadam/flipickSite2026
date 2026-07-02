@@ -15,6 +15,8 @@
   <meta name="twitter:title" content="PPT to SCORM | Flipick">
   <meta name="twitter:description" content="Turn your PowerPoint into a fully animated, narrated, assessed, SCORM-ready course. A third of the cost. A fifth of the time. Delivered in 15 days.">
   <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +37,11 @@
         "name": "PPT to SCORM | Flipick",
         "description": "Turn your PowerPoint into a fully animated, narrated, assessed, SCORM-ready course. A third of the cost. A fifth of the time. Delivered in 15 days.",
         "isPartOf": {"@id": "https://flipick.com/#website"},
-        "breadcrumb": {"@id": "https://flipick.com/pages/ppt-to-scorm.html#breadcrumb"}
+        "breadcrumb": {"@id": "https://flipick.com/pages/ppt-to-scorm.html#breadcrumb"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero .sub"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -53,6 +59,51 @@
         "provider": {"@id": "https://flipick.com/#organization"},
         "serviceType": "eLearning Content Production",
         "areaServed": "Worldwide"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is PPT to SCORM conversion?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PPT to SCORM conversion takes your existing PowerPoint deck and transforms it into a fully animated, narrated, assessed, SCORM-ready eLearning course — complete with scenario training, adaptive assessments and personalised learning paths. No scripts or storyboards needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to convert a PowerPoint to a SCORM course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Approximately 15 days from upload to delivery. You send your PowerPoint, PDF or Word document on day one; the AI pipeline redesigns, animates and narrates it; human QA reviews every output; and the finished SCORM and MP4 files are delivered by day 15."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does 'zero hallucination' mean in this context?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every element in the finished course — narration, visuals, assessment questions and scenario branches — is derived exclusively from your uploaded source documents. The AI does not invent or improvise content. Instructional designers review the output before delivery for accuracy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What file formats are accepted and delivered?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can upload PowerPoint (PPT/PPTX), PDF or Word documents. The finished course is delivered as SCORM 1.2 and MP4, ready to drop into any LMS. xAPI reporting and LTI integration are also supported."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does PPT to SCORM conversion cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Essentials package starts at ₹1,50,000 for a 45-minute narrated, animated compliance course with a 20-question assessment bank. The Professional tier ranges from ₹2,50,000 to ₹4,00,000 and adds scenario-based and adaptive assessments, AI avatar narration and brand-matched design. Enterprise pricing is available for multi-course programmes."
+            }
+          }
+        ]
       }
     ]
   }
@@ -62,13 +113,15 @@
 
 <div id="header-placeholder"></div>
 
+<main>
+
 <!-- ================= HERO ================= -->
 <section class="hero ps-hero">
   <div class="wrap">
     <div class="hero-grid rv">
       <span class="eyebrow">PowerPoint &rarr; SCORM pipeline</span>
       <h1 class="hero-h1-fluid">Your PowerPoint is already a course. <span class="serif-i text-brand-mid">We just finish it.</span></h1>
-      <p class="sub">Send the slides your team already has. Get back a fully animated, narrated, assessed, SCORM-ready course &mdash; with scenario training, adaptive assessments and personalised paths built in. Roughly a third of the cost of a traditional agency build, and a fifth of the time.</p>
+      <p class="sub"><strong>Flipick&rsquo;s PPT-to-SCORM service converts your existing PowerPoint into a fully animated, narrated, assessed, SCORM-ready eLearning course in approximately 15 days.</strong> Scenario training, adaptive assessments and personalised paths are built in &mdash; at roughly a third of the cost of a traditional agency build, and a fifth of the time.</p>
       <div class="ps-hero-proof">
         <span class="ps-hp">No scripts or storyboards</span>
         <span class="ps-hp">Source-locked &middot; zero hallucination</span>
@@ -336,8 +389,57 @@
   </div>
 </section>
 
+<!-- ================= QUICK FACTS ================= -->
+<section style="padding:0 0 40px">
+  <div class="lwrap">
+    <div class="fcard rv" style="border-left:3px solid var(--amber)">
+      <h3 style="margin-top:0;font-size:17px">PPT-to-SCORM quick facts</h3>
+      <ul style="margin:12px 0 0;line-height:1.8">
+        <li><b>Timeline:</b> ~15 days from upload to SCORM + MP4 delivery</li>
+        <li><b>Input formats:</b> PowerPoint (PPT/PPTX), PDF, Word</li>
+        <li><b>Output:</b> SCORM 1.2, MP4, xAPI reporting, LTI integration</li>
+        <li><b>Zero hallucination:</b> every element derived exclusively from your source documents</li>
+        <li><b>Essentials:</b> from &#8377;1,50,000 &mdash; 45-min narrated course with 20-question assessment bank</li>
+        <li><b>Professional:</b> &#8377;2,50,000&ndash;&#8377;4,00,000 &mdash; adds scenarios, adaptive assessments, AI avatar narration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq-section" aria-label="Frequently asked questions" style="padding:64px 0">
+  <div class="lwrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h2>Common questions about <span class="serif-i text-brand">PPT to SCORM conversion.</span></h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq">
+        <summary>What is PPT to SCORM conversion?</summary>
+        <p>PPT to SCORM conversion takes your existing PowerPoint deck and transforms it into a fully animated, narrated, assessed, SCORM-ready eLearning course &mdash; complete with scenario training, adaptive assessments and personalised learning paths. No scripts or storyboards needed.</p>
+      </details>
+      <details class="faq">
+        <summary>How long does it take to convert a PowerPoint to a SCORM course?</summary>
+        <p>Approximately 15 days from upload to delivery. You send your PowerPoint, PDF or Word document on day one; the AI pipeline redesigns, animates and narrates it; human QA reviews every output; and the finished SCORM and MP4 files are delivered by day 15.</p>
+      </details>
+      <details class="faq">
+        <summary>What does &ldquo;zero hallucination&rdquo; mean in this context?</summary>
+        <p>Every element in the finished course &mdash; narration, visuals, assessment questions and scenario branches &mdash; is derived exclusively from your uploaded source documents. The AI does not invent or improvise content. Instructional designers review the output before delivery for accuracy.</p>
+      </details>
+      <details class="faq">
+        <summary>What file formats are accepted and delivered?</summary>
+        <p>You can upload PowerPoint (PPT/PPTX), PDF or Word documents. The finished course is delivered as SCORM 1.2 and MP4, ready to drop into any LMS. xAPI reporting and LTI integration are also supported.</p>
+      </details>
+      <details class="faq">
+        <summary>How much does PPT to SCORM conversion cost?</summary>
+        <p>The Essentials package starts at &#8377;1,50,000 for a 45-minute narrated, animated compliance course with a 20-question assessment bank. The Professional tier ranges from &#8377;2,50,000 to &#8377;4,00,000 and adds scenario-based and adaptive assessments, AI avatar narration and brand-matched design. Enterprise pricing is available for multi-course programmes.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>Send us one PPT. <span class="serif-i">See what it becomes.</span></h2>
     <p>We&rsquo;ll turn one of your existing decks into a deployable course so you can see the output on your own content.</p>
@@ -346,6 +448,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 

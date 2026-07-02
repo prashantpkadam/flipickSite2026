@@ -32,7 +32,12 @@
       .then(function (html) {
         /* Replace [[ROOT]] placeholder with computed relative root path */
         html = html.split('[[ROOT]]').join(root);
-        placeholder.outerHTML = html;
+        var temp = document.createElement('div');
+        temp.innerHTML = html;
+        while (temp.firstChild) {
+          placeholder.parentNode.insertBefore(temp.firstChild, placeholder);
+        }
+        placeholder.remove();
       })
       .catch(function (err) {
         console.warn('Could not load include:', url, err);

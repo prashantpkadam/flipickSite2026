@@ -15,6 +15,8 @@
   <meta name="twitter:title" content="Flipick | Create, distribute and prove AI video">
   <meta name="twitter:description" content="Flipick is the AI video studio that creates studio-grade video, distributes it personally to every viewer, and proves it landed. One platform, end to end.">
   <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
   <link rel="icon" type="image/x-icon" href="assets/images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +43,7 @@
         },
         "description": "Flipick is an AI-powered learning technology platform that creates studio-grade video, distributes it personally to every viewer, and proves it landed.",
         "foundingDate": "2011",
+        "knowsAbout": ["AI video platform", "Variable Video Production", "learning management system", "SCORM courses", "enterprise learning technology", "personalised video delivery"],
         "founder": {"@type": "Person", "name": "Ravi Dugal"},
         "address": {
           "@type": "PostalAddress",
@@ -52,6 +55,13 @@
           "@type": "ContactPoint",
           "contactType": "sales",
           "url": "https://flipick.com/pages/company.html#contact"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "ratingCount": "150000",
+          "description": "Based on 150,000+ active learners across Flipick LMS and AI Video Platform"
         }
       },
       {
@@ -60,6 +70,29 @@
         "url": "https://flipick.com",
         "name": "Flipick",
         "description": "Create, distribute and prove AI video — one platform, end to end.",
+        "publisher": {"@id": "https://flipick.com/#organization"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://flipick.com/",
+        "url": "https://flipick.com/",
+        "name": "Flipick | Create, distribute and prove AI video",
+        "description": "Flipick is an AI video platform that creates studio-grade video, distributes a personalised version to every viewer, and proves who watched. One platform, end to end.",
+        "isPartOf": {"@id": "https://flipick.com/#website"},
+        "about": {"@id": "https://flipick.com/#organization"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero .sub"]
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Flipick Showreel — Create, Distribute, Prove",
+        "description": "A showreel demonstrating Flipick's AI video platform: studio-grade video creation, personalised distribution and viewer-level proof of engagement.",
+        "thumbnailUrl": "https://img.youtube.com/vi/wfMoSIuWX_Q/maxresdefault.jpg",
+        "uploadDate": "2026-01-15",
+        "contentUrl": "https://www.youtube.com/watch?v=wfMoSIuWX_Q",
+        "embedUrl": "https://www.youtube.com/embed/wfMoSIuWX_Q",
         "publisher": {"@id": "https://flipick.com/#organization"}
       }
     ]
@@ -70,13 +103,15 @@
 
 <div id="header-placeholder"></div>
 
+<main>
+
 <!-- ================= HERO ================= -->
-<section class="hero" style="padding-top:60px;padding-bottom:0;background:linear-gradient(180deg,var(--night) 0%,var(--night-2) 78%,var(--paper) 78.05%)">
+<section class="hero" aria-label="Hero — Create, distribute and prove AI video" style="padding-top:60px;padding-bottom:0;background:linear-gradient(180deg,var(--night) 0%,var(--night-2) 78%,var(--paper) 78.05%)">
   <div class="wrap">
     <div class="hero-grid">
       <div>
         <h1 style="font-size:clamp(40px,5.6vw,66px)">Create video. Distribute it personally. <span class="serif-i" style="color:var(--brand-mid)">Prove it worked.</span></h1>
-        <p class="sub">Flipick is the AI video studio that doesn't stop at a clip. Script it, storyboard it, keep your cast and products consistent, deliver a version to every viewer — and measure who watched.</p>
+        <p class="sub"><strong>Flipick is an AI video platform that creates studio-grade video, distributes a personalised version to every viewer, and proves who watched.</strong> Script it, storyboard it, keep your cast and products consistent, deliver by link, email or LMS &mdash; and measure completion, drop-off and CTA clicks.</p>
         <div class="ctas">
           <a class="btn btn-ghost" data-demo-link href="https://calendly.com/amol-chandsarkar/" target="_blank" rel="noopener noreferrer">Book a demo</a>
         </div>
@@ -94,7 +129,7 @@
 </section>
 
 <!-- ================= CREATE / DISTRIBUTE / PROVE ================= -->
-<section style="background:#fff;border-top:1px solid var(--line);padding:80px 0">
+<section aria-label="Create, distribute and prove pipeline" style="background:#fff;border-top:1px solid var(--line);padding:80px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">The whole job, not a third of it</span>
@@ -121,7 +156,7 @@
 </section>
 
 <!-- ================= HOW IT WORKS ================= -->
-<section id="how" style="padding:80px 0 30px">
+<section id="how" aria-label="How Flipick works" style="padding:80px 0 30px">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">How it works</span>
@@ -215,7 +250,7 @@
 </section>
 
 <!-- ================= SOLUTIONS / USE CASES ================= -->
-<section id="solutions" style="background:#fff;border-top:1px solid var(--line);padding:80px 0">
+<section id="solutions" aria-label="Flipick solutions" style="background:#fff;border-top:1px solid var(--line);padding:80px 0">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Who it's for</span>
@@ -268,7 +303,7 @@
 </section>
 
 <!-- ================= PRICING TEASER ================= -->
-<section id="pricing" style="padding:84px 0">
+<section id="pricing" aria-label="Pricing overview" style="padding:84px 0">
   <div class="wrap">
     <div class="pteaser rv">
       <span class="eyebrow">Pricing</span>
@@ -286,7 +321,7 @@
 </section>
 
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>Ready to make video <span class="serif-i">that does its job?</span></h2>
     <p>Bring a brief and watch Flipick take it from screenplay to a measured campaign.</p>
@@ -295,6 +330,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 

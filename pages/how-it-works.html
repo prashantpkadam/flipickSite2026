@@ -15,6 +15,8 @@
   <meta name="twitter:title" content="How It Works | Flipick — Create, Distribute, Prove">
   <meta name="twitter:description" content="Inside the Flipick studio: the Screenplay Builder, Asset Library, Ingredients and Overlays (Variable Video Production), plus personalized distribution and proof.">
   <meta name="twitter:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="Flipick">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +37,11 @@
         "name": "How It Works | Flipick — Create, Distribute, Prove",
         "description": "Inside the Flipick studio: the Screenplay Builder, Asset Library, Ingredients and Overlays (Variable Video Production), plus personalized distribution and proof.",
         "isPartOf": {"@id": "https://flipick.com/#website"},
-        "breadcrumb": {"@id": "https://flipick.com/pages/how-it-works.html#breadcrumb"}
+        "breadcrumb": {"@id": "https://flipick.com/pages/how-it-works.html#breadcrumb"},
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero .sub"]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -93,6 +99,51 @@
             "text": "Authenticate viewers, track completion and drop-off, and tie CTAs to action. Know who watched, who finished, who acted."
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Variable Video Production (VVP)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Variable Video Production is Flipick's method for generating personalised videos at scale. You create one master film with variable data fields (Ingredients), then the platform swaps names, products, prices and other details per recipient — producing a unique version for every viewer without re-rendering from scratch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the Screenplay Builder work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You describe your objective and the AI builds a production-ready screenplay through a structured conversation — narrative arc, scenes, shot-by-shot breakdowns, voiceover and dialogue. You approve the story before any rendering credits are spent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Flipick keep characters and products consistent across scenes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Asset Library stores reusable production elements — ambassadors, characters, products and locations. Once locked, these assets persist across every shot and every project in your organisation, so faces and brand elements stay the same from scene one to scene nine."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need video editing skills to use Flipick?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The platform handles the entire pipeline from script to delivery. You work at the story level — approving screenplays and storyboards — while AI handles rendering, editing, overlays and assembly. If you can write a brief, you can produce a finished video."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does personalised distribution and proof work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Flipick delivers a unique version of your video to each recipient by link, email or LMS. Viewers are authenticated, so you get verified completion data, drop-off tracking and CTA click-through — not just view counts. Every metric is audit-ready."
+            }
+          }
+        ]
       }
     ]
   }
@@ -102,8 +153,10 @@
 
 <div id="header-placeholder"></div>
 
+<main>
+
 <!-- ================= HERO ================= -->
-<section class="hero" style="padding-top:60px;padding-bottom:30px">
+<section class="hero" aria-label="How Flipick works" style="padding-top:60px;padding-bottom:30px">
   <div class="wrap">
     <div class="hero-grid" style="max-width:920px">
       <h1 style="font-size:clamp(38px,5.4vw,60px)">How Flipick works: <span class="serif-i" style="color:var(--brand-mid)">create, distribute, prove.</span></h1>
@@ -134,7 +187,7 @@
 </section>
 
 <!-- ================= SCREENPLAY BUILDER ================= -->
-<section id="screenplay" style="padding:20px 0">
+<section id="screenplay" aria-label="Screenplay Builder" style="padding:20px 0">
   <div class="wrap">
     <div class="feat rv" style="border-bottom:none">
       <div class="media">
@@ -157,7 +210,7 @@
 </section>
 
 <!-- ================= VIDEO BUILDER ================= -->
-<section id="video" style="background:#fff;border-top:1px solid var(--line);padding:20px 0">
+<section id="video" aria-label="Video Builder" style="background:#fff;border-top:1px solid var(--line);padding:20px 0">
   <div class="wrap">
     <div class="feat rev rv" style="border-bottom:none">
       <div class="media">
@@ -179,7 +232,7 @@
 </section>
 
 <!-- ================= ASSET LIBRARY ================= -->
-<section id="assets" style="padding:20px 0">
+<section id="assets" aria-label="Asset Library" style="padding:20px 0">
   <div class="wrap">
     <div class="feat rv" style="border-bottom:none">
       <div class="media">
@@ -201,7 +254,7 @@
 </section>
 
 <!-- ================= INGREDIENTS ================= -->
-<section id="ingredients" style="background:#fff;border-top:1px solid var(--line);padding:20px 0">
+<section id="ingredients" aria-label="Ingredients — Variable Video Production" style="background:#fff;border-top:1px solid var(--line);padding:20px 0">
   <div class="wrap">
     <div class="feat rev rv" style="border-bottom:none">
       <div class="media">
@@ -223,7 +276,7 @@
 </section>
 
 <!-- ================= OVERLAYS ================= -->
-<section id="overlays" style="padding:20px 0 40px">
+<section id="overlays" aria-label="Overlays and personalisation" style="padding:20px 0 40px">
   <div class="wrap">
     <div class="feat rv" style="border-bottom:none">
       <div class="media">
@@ -245,7 +298,7 @@
 </section>
 
 <!-- ================= THE RESULT ================= -->
-<section id="result" style="background:#fff;border-top:1px solid var(--line);padding:60px 0 40px">
+<section id="result" aria-label="Distribution and proof" style="background:#fff;border-top:1px solid var(--line);padding:60px 0 40px">
   <div class="wrap">
     <div class="feat rev rv" style="border-bottom:none">
       <div class="media">
@@ -327,8 +380,40 @@
   </div>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center;margin:0 auto 36px">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions about <span class="serif-i" style="color:var(--brand)">how Flipick works.</span></h2>
+    </div>
+    <div class="faq rv">
+      <details open>
+        <summary>What is Variable Video Production (VVP)?</summary>
+        <p>Variable Video Production is Flipick&rsquo;s method for generating personalised videos at scale. You create one master film with variable data fields (Ingredients), then the platform swaps names, products, prices and other details per recipient &mdash; producing a unique version for every viewer without re-rendering from scratch.</p>
+      </details>
+      <details>
+        <summary>How does the Screenplay Builder work?</summary>
+        <p>You describe your objective and the AI builds a production-ready screenplay through a structured conversation &mdash; narrative arc, scenes, shot-by-shot breakdowns, voiceover and dialogue. You approve the story before any rendering credits are spent.</p>
+      </details>
+      <details>
+        <summary>How does Flipick keep characters and products consistent across scenes?</summary>
+        <p>The Asset Library stores reusable production elements &mdash; ambassadors, characters, products and locations. Once locked, these assets persist across every shot and every project in your organisation, so faces and brand elements stay the same from scene one to scene nine.</p>
+      </details>
+      <details>
+        <summary>Do I need video editing skills to use Flipick?</summary>
+        <p>No. The platform handles the entire pipeline from script to delivery. You work at the story level &mdash; approving screenplays and storyboards &mdash; while AI handles rendering, editing, overlays and assembly. If you can write a brief, you can produce a finished video.</p>
+      </details>
+      <details>
+        <summary>How does personalised distribution and proof work?</summary>
+        <p>Flipick delivers a unique version of your video to each recipient by link, email or LMS. Viewers are authenticated, so you get verified completion data, drop-off tracking and CTA click-through &mdash; not just view counts. Every metric is audit-ready.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CLOSING CTA ================= -->
-<section class="closing">
+<section class="closing" aria-label="Call to action">
   <div class="wrap">
     <h2>See the studio <span class="serif-i">on your own brief.</span></h2>
     <p>Bring a script, a deck or a product, and watch it become a finished, measured video.</p>
@@ -337,6 +422,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <div id="footer-placeholder"></div>
 
