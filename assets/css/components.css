@@ -1314,8 +1314,8 @@ h2.mt-8 { margin-top: 8px; }
 .vvp-leadp         { max-width: 730px; }
 
 /* Lock-down nav on VVP page — all header/footer links disabled except Book Demo */
-body[data-page="vvp-usa"] #header-placeholder a:not([data-demo-link]),
-body[data-page="vvp-usa"] #footer-placeholder a:not([data-demo-link]) {
+body[data-page="vvp-usa"] header a:not([data-demo-link]),
+body[data-page="vvp-usa"] footer a:not([data-demo-link]) {
   pointer-events: none;
   cursor: default;
   opacity: 0.4;
