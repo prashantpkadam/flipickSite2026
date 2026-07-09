@@ -3,6 +3,7 @@
   'use strict';
 
   var tierRates = { none: 3300, light: 4250, moderate: 5500, heavy: 6250, creative: 8000 };
+  var CREDIT_USD = 0.01;
 
   function distRate(n) {
     if (n <= 0)     return 0;
@@ -13,7 +14,28 @@
     return 20;
   }
 
-  function fmt(n) { return Math.round(n).toLocaleString('en-IN'); }
+  function geo() { return window.FLIPICK_CURRENCY || { code: 'INR', symbol: '₹' }; }
+
+  function fmt(n) {
+    var rounded = Math.round(n);
+    return geo().code === 'INR'
+      ? rounded.toLocaleString('en-IN')
+      : rounded.toLocaleString('en-US');
+  }
+
+  function fmtMoney(credits) {
+    var g = geo();
+    if (g.code === 'INR') return '→ ₹' + fmt(credits);
+    var dollars = credits * CREDIT_USD;
+    return '→ $' + dollars.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function creditNote() {
+    var g = geo();
+    return g.code === 'INR'
+      ? 'Estimate only · 1 credit = ₹1 · creation figures are tier midpoints/ceilings.'
+      : 'Estimate only · 1 credit = $0.01 (1¢) · creation figures are tier midpoints/ceilings.';
+  }
 
   function activeTier() {
     var btn = document.querySelector('#tierSeg button.on') ||
@@ -40,9 +62,15 @@
     setText('cCreate', fmt(create));
     setText('cDist', fmt(dist));
     setText('cTotal', fmt(total));
-    setText('cRupee', '→ ₹' + fmt(total));
+    setText('cRupee', fmtMoney(total));
     setText('cMinsLab', '· ' + mins.toFixed(1) + ' min, ' + tier);
     setText('cRateLab', rcpts > 0 ? '· ' + fmt(rcpts) + ' × ' + rate : '');
+
+    var noteEl = document.getElementById('cRupee');
+    if (noteEl) {
+      var rnote = noteEl.nextElementSibling;
+      if (rnote && rnote.classList.contains('rnote')) rnote.textContent = creditNote();
+    }
   }
 
   function setText(id, val) {
@@ -67,6 +95,8 @@
     });
 
     recalc();
+
+    document.addEventListener('geo:resolved', function () { recalc(); });
   }
 
   if (document.readyState === 'loading') {

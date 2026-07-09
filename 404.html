@@ -16,38 +16,83 @@
   <link rel="stylesheet" href="/assets/css/components.css">
   <link rel="stylesheet" href="/assets/css/responsive.css">
   <style>
-    .err-wrap {
+    .err {
       min-height: 80vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      background: var(--night);
+      position: relative;
+      overflow: hidden;
+    }
+    .err::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(68,76,236,.22), transparent 62%);
+      top: -300px;
+      right: -200px;
+      pointer-events: none;
+    }
+    .err::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(156,161,246,.12), transparent 62%);
+      bottom: -200px;
+      left: -150px;
+      pointer-events: none;
+    }
+    .err-inner {
+      position: relative;
       text-align: center;
       padding: 60px 24px;
+      max-width: 600px;
     }
     .err-code {
-      font-size: clamp(80px, 14vw, 140px);
-      font-weight: 800;
-      line-height: 1;
-      color: var(--brand);
-      margin: 0 0 16px;
+      font: 800 clamp(120px, 20vw, 200px)/1 var(--disp);
+      background: linear-gradient(165deg, var(--brand-mid) 0%, var(--brand) 50%, var(--brand-deep) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: .85;
+      margin: 0 0 24px;
+      letter-spacing: -.06em;
     }
-    .err-wrap h1 {
-      font-size: clamp(22px, 3.5vw, 36px);
-      margin: 0 0 12px;
+    .err-inner h1 {
+      font: 700 clamp(24px, 3.5vw, 38px)/1.2 var(--disp);
+      color: #fff;
+      margin: 0 0 14px;
     }
-    .err-wrap p {
-      color: var(--ink-soft);
-      max-width: 480px;
-      margin: 0 auto 32px;
-      font-size: 16px;
+    .err-inner p {
+      color: #C8C9E2;
+      font-size: 17px;
       line-height: 1.6;
+      margin: 0 0 36px;
     }
-    .err-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
+    .err-inner .btn-primary {
+      background: #fff;
+      color: var(--brand);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    .err-inner .btn-primary:hover {
+      background: var(--paper);
+    }
+    .err-path {
+      display: inline-block;
+      margin-top: 28px;
+      font: 500 13px/1 var(--body);
+      color: rgba(255,255,255,.25);
+      background: rgba(255,255,255,.06);
+      padding: 8px 16px;
+      border-radius: 8px;
+      letter-spacing: .02em;
+      word-break: break-all;
+      max-width: 100%;
     }
   </style>
 </head>
@@ -57,20 +102,15 @@
 
 <main>
 
-<div class="err-wrap">
-  <div class="err-code">404</div>
-  <h1>This page doesn't exist.</h1>
-  <p>The link may be broken, or the page may have moved. Try one of these instead:</p>
-  <div class="err-links">
-    <a class="btn btn-primary" href="/">Home</a>
-    <a class="btn btn-ghost" href="/pages/solutions.html">Solutions</a>
-    <a class="btn btn-ghost" href="/pages/AI-video-platform.html">AI Video Platform</a>
-    <a class="btn btn-ghost" href="/pages/lms.html">LMS</a>
-    <a class="btn btn-ghost" href="/pages/ppt-to-scorm.html">PPT to SCORM</a>
-    <a class="btn btn-ghost" href="/pages/pricing.html">Pricing</a>
-    <a class="btn btn-ghost" href="/pages/company.html">Company</a>
+<section class="err">
+  <div class="err-inner">
+    <div class="err-code">404</div>
+    <h1>This page doesn't exist.</h1>
+    <p>The link may be broken, or the page may have moved. Head back home and you'll find your way.</p>
+    <a class="btn btn-primary" href="/">Back to home</a>
+    <div class="err-path" id="errPath"></div>
   </div>
-</div>
+</section>
 
 </main>
 
@@ -80,5 +120,11 @@
 <script src="/assets/js/includes.js"></script>
 <script src="/assets/js/navigation.js"></script>
 <script src="/assets/js/main.js"></script>
+<script>
+  var el = document.getElementById('errPath');
+  if (el && window.location.pathname !== '/404.html') {
+    el.textContent = window.location.pathname;
+  }
+</script>
 </body>
 </html>

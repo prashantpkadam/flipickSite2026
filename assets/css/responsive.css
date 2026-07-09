@@ -63,6 +63,7 @@
   /* Feature strips */
   .feat { grid-template-columns: 1fr; gap: 28px; direction: ltr !important; }
   .feat.rev { direction: ltr; }
+  .camp-uc.rev { direction: ltr; }
 
   /* Flags */
   .flags { grid-template-columns: 1fr; }
@@ -144,6 +145,7 @@
   /* Feature strips */
   .feat { grid-template-columns: 1fr; gap: 32px; direction: ltr !important; }
   .feat.rev { direction: ltr; }
+  .camp-uc.rev { direction: ltr; }
 
   /* Flags */
   .flags { grid-template-columns: 1fr 1fr; }
@@ -211,6 +213,8 @@
 @media (max-width: 767px) {
   section { padding: 64px 0; }
   .sec-head { margin-bottom: 36px; }
+  .sec-head.sec-head--mb-28 { margin-bottom: 28px; }
+  .sec-head.sec-head--mb-34 { margin-bottom: 34px; }
   .sec-head h2 { font-size: 28px; }
 
   /* Nav toggle visible */
@@ -540,6 +544,37 @@
   .lp-lm-card { min-width: 130px; height: 78px; padding: 10px 14px; }
   .lp-lm-card img { height: 48px; max-width: 112px; }
   .lp-lm-track { gap: 10px; animation-duration: 18s; }
+}
+
+/* =========================================================================
+   CAMPAIGN LANDING PAGES — Responsive  (ai-video-ld, ai-video-marketing)
+   ========================================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .camp-hero { padding: 72px 0 44px; }
+  .camp-flush { padding: 28px 0; }
+  .camp-section { padding: 64px 0; }
+  .camp-section-sm { padding: 48px 0; }
+  .mcheck { grid-template-columns: 1fr; }
+  .camp-logorow { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .camp-hero { padding: 56px 0 36px; }
+  .camp-flush { padding: 24px 0; }
+  .camp-section { padding: 52px 0; }
+  .camp-section-sm { padding: 40px 0; }
+  .camp-cta-row { flex-direction: column; }
+  .camp-cta-row .btn { justify-content: center; }
+  .mcheck { grid-template-columns: 1fr; }
+  .camp-logorow { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .camp-hero { padding: 48px 0 28px; }
+  .camp-flush { padding: 20px 0; }
+  .camp-section { padding: 44px 0; }
+  .camp-section-sm { padding: 32px 0; }
 }
 
 /* =========================================================================

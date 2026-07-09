@@ -27,6 +27,18 @@
   var V_SOLUTIONS_PROMO    = 'https://storage.googleapis.com/flipick-videos-gen/0cfb4eba-4a52-4436-989e-cb086917f56a-2_TRAINING Â· ADS Â· FILM Â· EXPLAINERS 1.mp4'; // By content type – Festive product promo
   var V_SOLUTIONS_PERSONAL = 'https://storage.googleapis.com/flipick-videos-gen/0bce4242-1d00-43a1-9b58-715d88b637b3-3_MULTILINGUAL Â· ACCURATE Â· AUDIT-READY 1.mp4'; // By industry – One film, personal versions
 
+  /* pages/ai-video-ld.html ---------------------------------------- */
+  var V_LD_SHOWREEL    = 'https://storage.googleapis.com/flipick-videos-gen/246252c2-2301-4d8b-9ab1-a1c47d1c428f-4_ONE PLATFORM, MANY USES.mp4';           // Reuse hero showreel
+  var V_LD_ONBOARDING  = 'https://storage.googleapis.com/flipick-videos-gen/dd9585ad-af2b-4f76-8e98-94ced4a22b23-Customer Service.mp4';         // Onboarding lesson
+  var V_LD_MULTILINGUAL = 'https://storage.googleapis.com/flipick-videos-gen/0bce4242-1d00-43a1-9b58-715d88b637b3-3_MULTILINGUAL Â· ACCURATE Â· AUDIT-READY 1.mp4';     // Multilingual training
+  var V_LD_PERSONALIZED = 'https://storage.googleapis.com/flipick-videos-gen/0cfb4eba-4a52-4436-989e-cb086917f56a-2_TRAINING Â· ADS Â· FILM Â· EXPLAINERS 1.mp4';  // Personalized learning
+
+  /* pages/ai-video-marketing.html ---------------------------------- */
+  var V_MKT_SHOWREEL     = V_INDEX_HERO;           // Reuse hero showreel
+  var V_MKT_PERSONALIZED = V_SOLUTIONS_PERSONAL;   // Personalized campaign
+  var V_MKT_MULTILINGUAL = V_SOLUTIONS_PROMO;      // Multilingual marketing
+  var V_MKT_PROMO        = V_INDEX_PROMO;           // Festive product promo
+
   /* pages/lp-hr-ld.html ------------------------------------------ */
   var V_LP_INTRO = 'https://flipick.com/assets/Introduction%20to%20Flipick%201.mp4'; // Introduction to Flipick
   var V_LP_POSH  = 'https://flipick.com/assets/Introduction%20to%20Flipick%201.mp4'; // POSH Training sample
@@ -41,6 +53,14 @@
     'solutions-ld':           V_SOLUTIONS_LD,
     'solutions-promo':        V_SOLUTIONS_PROMO,
     'solutions-personal':     V_SOLUTIONS_PERSONAL,
+    'ld-showreel':            V_LD_SHOWREEL,
+    'ld-onboarding':          V_LD_ONBOARDING,
+    'ld-multilingual':        V_LD_MULTILINGUAL,
+    'ld-personalized':        V_LD_PERSONALIZED,
+    'mkt-showreel':           V_MKT_SHOWREEL,
+    'mkt-personalized':       V_MKT_PERSONALIZED,
+    'mkt-multilingual':       V_MKT_MULTILINGUAL,
+    'mkt-promo':              V_MKT_PROMO,
     'lp-intro':               V_LP_INTRO,
     'lp-posh':                V_LP_POSH
   };
@@ -58,6 +78,14 @@
     'solutions-ld':      _siteRoot + 'assets/images/thumbnail/by-team.jpg',
     'solutions-promo':   _siteRoot + 'assets/images/thumbnail/by-content.jpg',
     'solutions-personal':_siteRoot + 'assets/images/thumbnail/by-industry.jpg',
+    'ld-showreel':       _siteRoot + 'assets/images/thumbnail/by-team.jpg',
+    'ld-onboarding':     _siteRoot + 'assets/images/thumbnail/CustomerService.jpg',
+    'ld-multilingual':   _siteRoot + 'assets/images/thumbnail/by-industry.jpg',
+    'ld-personalized':   _siteRoot + 'assets/images/thumbnail/by-content.jpg',
+    'mkt-showreel':      _siteRoot + 'assets/images/thumbnail/hero-section-showreel.jpg',
+    'mkt-personalized':  _siteRoot + 'assets/images/thumbnail/by-industry.jpg',
+    'mkt-multilingual':  _siteRoot + 'assets/images/thumbnail/by-content.jpg',
+    'mkt-promo':         _siteRoot + 'assets/images/thumbnail/festive-product-promo.jpg',
     'lp-intro':          _siteRoot + 'assets/images/thumbnail/Introduction-to-Flipick.jpg',
     'lp-posh':           _siteRoot + 'assets/images/thumbnail/Preventing-Harassment-POSH-Training.jpg'
   };

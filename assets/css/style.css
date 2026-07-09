@@ -3,6 +3,9 @@
    style.css: CSS variables, reset, typography, shared layout components
    ========================================================================== */
 
+/* ---- Geo-pricing cloak (hidden until country detection resolves) ------- */
+.geo-cloak { visibility: hidden; }
+
 /* ---- Custom Properties ------------------------------------------------- */
 :root {
   --brand: #444CEC;
@@ -146,9 +149,9 @@ header { position: sticky; top: 0; z-index: 50; background: rgba(250,250,248,.86
 .ov.lower3 { display: none; }
 .ov.lower3 b { display: block; font: 700 13px var(--body); color: #fff; }
 .ov.lower3 span { font: 500 11px var(--body); color: var(--brand-mid); }
-.ov.price { right: 20px; top: 54px; background: var(--amber); color: #2B1B00; font: 800 13px var(--body); padding: 9px 13px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,.35); transform: rotate(3deg); }
+.ov.price { right: 20px; top: 30px; display: none; background: var(--amber); color: #2B1B00; font: 800 13px var(--body); padding: 9px 13px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,.35); transform: rotate(3deg); }
 .ov.price small { display: block; font: 600 10px var(--body); opacity: .75; }
-.ov.cta { right: 18px; bottom: 64px; background: var(--teal); color: #fff; font: 700 12px var(--body); padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,.35); }
+.ov.cta { right: 18px; bottom: 54px; display: none; background: var(--teal); color: #fff; font: 700 12px var(--body); padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,.35); }
 
 /* ---- Hero -------------------------------------------------------------- */
 .hero { background: var(--night); color: #fff; padding: 84px 0; position: relative; overflow: hidden; }
@@ -263,9 +266,10 @@ section { padding: 96px 0; }
 /* ---- Closing CTA ------------------------------------------------------- */
 .closing { background: linear-gradient(165deg, var(--brand) 0%, var(--brand-deep) 100%); color: #fff; text-align: center; padding: 96px 0; }
 .closing h2 { font-size: clamp(34px, 4.6vw, 54px); color: #fff; margin-bottom: 14px; }
-.closing p { color: #DFE0FD; font-size: 18px; margin-bottom: 34px; }
+.closing p { color: var( --line); font-size: 18px; margin-bottom: 34px; }
 .closing .btn-primary { background: #fff; color: var(--brand); box-shadow: 0 12px 30px rgba(0,0,0,.25); }
 .closing .btn-primary:hover { background: var(--paper); }
+.also-explore {color: var( --line); font-size: 14px; margin-top: 34px; display: none;}
 
 /* ---- Footer ------------------------------------------------------------ */
 footer { background: var(--night); color: #A9AACB; padding: 72px 0 36px; }
@@ -277,7 +281,6 @@ footer { background: var(--night); color: #A9AACB; padding: 72px 0 36px; }
 .foot-grid li { margin-bottom: 10px; font-size: 14px; }
 .foot-grid a:hover { color: #fff; }
 .foot-base { border-top: 1px solid rgba(255,255,255,.12); padding-top: 26px; display: flex; justify-content: space-between; font-size: 13px; flex-wrap: wrap; gap: 12px; }
-.foot-base a { margin-left: 22px; }
 .foot-base a:hover { color: #fff; }
 .foot-cta { display: inline-block; margin-top: 22px; padding: 9px 20px; border: 1px solid rgba(255,255,255,.3); border-radius: 6px; color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .02em; transition: background .18s, border-color .18s; }
 .foot-cta:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.6); }

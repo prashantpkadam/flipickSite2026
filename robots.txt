@@ -26,4 +26,10 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
 Sitemap: https://flipick.com/sitemap.xml

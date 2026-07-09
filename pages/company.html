@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Company &amp; Contact | Flipick</title>
   <meta name="description" content="About Flipick, our security approach, careers, and how to get in touch. Existing Flipick LMS customers can sign in here too.">
-  <link rel="canonical" href="https://flipick.com/pages/company.html">
+  <link rel="canonical" href="https://flipick.com/company">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://flipick.com/pages/company.html">
+  <meta property="og:url" content="https://flipick.com/company">
   <meta property="og:title" content="Company &amp; Contact | Flipick">
   <meta property="og:description" content="About Flipick, our security approach, careers, and how to get in touch. Existing Flipick LMS customers can sign in here too.">
   <meta property="og:image" content="https://flipick.com/assets/images/flipick-og-banner.png">
@@ -32,12 +32,12 @@
     "@graph": [
       {
         "@type": ["WebPage", "ContactPage"],
-        "@id": "https://flipick.com/pages/company.html",
-        "url": "https://flipick.com/pages/company.html",
+        "@id": "https://flipick.com/company",
+        "url": "https://flipick.com/company",
         "name": "Company & Contact | Flipick",
         "description": "About Flipick, our security approach, careers, and how to get in touch. Existing Flipick LMS customers can sign in here too.",
         "isPartOf": {"@id": "https://flipick.com/#website"},
-        "breadcrumb": {"@id": "https://flipick.com/pages/company.html#breadcrumb"},
+        "breadcrumb": {"@id": "https://flipick.com/company#breadcrumb"},
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": [".hero h1", ".hero .sub", ".lede"]
@@ -45,10 +45,10 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://flipick.com/pages/company.html#breadcrumb",
+        "@id": "https://flipick.com/company#breadcrumb",
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flipick.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Company", "item": "https://flipick.com/pages/company.html"}
+          {"@type": "ListItem", "position": 2, "name": "Company", "item": "https://flipick.com/company"}
         ]
       },
       {
@@ -77,13 +77,13 @@
             "@type": "ContactPoint",
             "contactType": "sales",
             "email": "sales@flipick.com",
-            "url": "https://flipick.com/pages/company.html#contact"
+            "url": "https://flipick.com/company#contact"
           },
           {
             "@type": "ContactPoint",
             "contactType": "customer support",
             "email": "support@flipick.com",
-            "url": "https://flipick.com/pages/company.html#contact"
+            "url": "https://flipick.com/company#contact"
           }
         ],
         "openingHoursSpecification": {
@@ -104,10 +104,10 @@
 <main>
 
 <!-- ================= HERO ================= -->
-<section class="hero" aria-label="About Flipick" style="padding-top:60px;padding-bottom:36px">
+<section class="hero hero--mid" aria-label="About Flipick">
   <div class="wrap">
-    <div class="hero-grid" style="max-width:900px">
-      <h1 style="font-size:clamp(38px,5.4vw,60px)">Video should do its job &#8212; <span class="serif-i" style="color:var(--brand-mid)">and prove it.</span></h1>
+    <div class="hero-grid hero-grid--lg">
+      <h1 class="hero-h1--md">Video should do its job &#8212; <span class="serif-i text-brand-mid">and prove it.</span></h1>
       <p class="sub">Flipick is a learning-technology company. For <b>15 years</b>, Flipick LMS has powered enterprise learning &#8212; and now our AI video platform helps teams create, personalize and prove the video inside it.</p>
       <div class="ways">
         <a href="#about">About</a>
@@ -118,17 +118,20 @@
 </section>
 
 <!-- ================= ABOUT / OUR STORY ================= -->
-<section id="about" aria-label="Our story and milestones" style="background:#fff;border-top:1px solid var(--line);padding:74px 0">
+<section id="about" class="section-white section-pad-lg" aria-label="Our story and milestones">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Our story</span>
-      <h2>Built on <span class="serif-i" style="color:var(--brand)">15 years</span> in learning technology.</h2>
+      <h2>Built on <span class="serif-i text-brand">15 years</span> in learning technology.</h2>
     </div>
     <div class="lede rv">
       <p>Flipick didn't start with AI video &#8212; it started in learning technology. Since <b>2011</b>, <b>Flipick LMS</b> has helped enterprises deliver, manage and track learning at scale.</p>
       <p>Working inside those programmes, we kept hearing the same need: training and communication had to become <b>video</b> &#8212; studio-grade, personalized and measurable &#8212; without the cost and timelines of a production house. So we built the Flipick AI video platform on the foundation of <b>15 years</b> of learning-technology experience.</p>
       <p>Today, the same company that runs your courses can create the video inside them, deliver it personally, and prove it landed.</p>
-      <p class="story-meta">Founded by <b>Ravi Dugal</b> &nbsp;&middot;&nbsp; Built and run from <b>Pune, India</b> &nbsp;&middot;&nbsp; Trusted by <b>Pearson, IIBF, IICA and more</b></p>
+      <div class="story-meta">
+        <p class="story-meta-name"><b>Ravi Dugal</b> &mdash; Founder &amp; CEO &nbsp;<a href="https://www.linkedin.com/in/ravidugal/" target="_blank" rel="noopener noreferrer" class="d-none">LinkedIn&nbsp;&rarr;</a></p>
+        <p class="story-meta-bio">Ravi founded Flipick in 2011 with 20+ years of experience in enterprise learning technology, digital publishing and content transformation. Under his leadership, Flipick has grown from an LMS provider to a full AI video and skills-development platform, serving organisations including Pearson, IIBF, Godrej and IFC World Bank Group. Based in Pune, India.</p>
+      </div>
     </div>
     <div class="thread rv">
       <div class="node"><span class="dot"></span><span class="lbl">Create</span></div><span class="seg"></span>
@@ -137,7 +140,7 @@
     </div>
 
     <!-- Milestone timeline -->
-    <div class="rv" style="margin-top:48px">
+    <div class="rv mt-48">
       <p class="tl-head">Milestones</p>
       <div class="timeline">
         <div class="tl"><time class="yr" datetime="2011">2011</time><div class="bd"><h4>Flipick Founded</h4><p>Established with a vision to transform education from passive studying to meaningful learning.</p></div></div>
@@ -150,7 +153,7 @@
       </div>
     </div>
 
-    <div class="vals rv" style="margin-top:48px">
+    <div class="vals rv mt-48">
       <div class="val"><div class="ic">&#9680;</div><h3>Built by learning people</h3><p>Years inside enterprise learning shape everything &#8212; structure, measurement, and respect for the learner's time.</p></div>
       <div class="val"><div class="ic">&#9678;</div><h3>Proof over impressions</h3><p>&#8220;It got views&#8221; isn&#8217;t an outcome. We measure who watched, who finished, who acted.</p></div>
       <div class="val"><div class="ic">&#25991;</div><h3>Made for many languages</h3><p>One production should reach everyone in their own language &#8212; without re-recording.</p></div>
@@ -160,11 +163,11 @@
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" aria-label="Contact Flipick" style="padding:74px 0">
+<section id="contact" class="section-pad-lg" aria-label="Contact Flipick">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Contact</span>
-      <h2>Let's <span class="serif-i" style="color:var(--brand)">talk.</span></h2>
+      <h2>Let's <span class="serif-i text-brand">talk.</span></h2>
     </div>
     <div class="contact-grid rv">
       <div class="cform">
@@ -173,24 +176,24 @@
           <p class="fsub">Demo, pricing, support or a question &#8212; we reply within a business day.</p>
           <div class="field two">
             <div>
-              <label for="cName">Name <span style="color:#C53030">*</span></label>
+              <label for="cName">Name <span class="required">*</span></label>
               <input type="text" id="cName" placeholder="Your name" autocomplete="name">
               <div class="field-error" id="cNameErr"></div>
             </div>
             <div>
-              <label for="cEmail">Work email <span style="color:#C53030">*</span></label>
+              <label for="cEmail">Work email <span class="required">*</span></label>
               <input type="email" id="cEmail" placeholder="you@company.com" autocomplete="email">
               <div class="field-error" id="cEmailErr"></div>
             </div>
           </div>
           <div class="field two">
             <div>
-              <label for="cCompany">Company <span style="color:#C53030">*</span></label>
+              <label for="cCompany">Company <span class="required">*</span></label>
               <input type="text" id="cCompany" placeholder="Company name" autocomplete="organization">
               <div class="field-error" id="cCompanyErr"></div>
             </div>
             <div>
-              <label for="cTopic">I'm interested in <span style="color:#C53030">*</span></label>
+              <label for="cTopic">I'm interested in <span class="required">*</span></label>
               <select id="cTopic">
                 <option value="">— select a topic —</option>
                 <option value="Booking a demo">Booking a demo</option>
@@ -204,7 +207,7 @@
             </div>
           </div>
           <div class="field">
-            <label for="cMsg">Message <span style="color:#C53030">*</span></label>
+            <label for="cMsg">Message <span class="required">*</span></label>
             <textarea id="cMsg" placeholder="Tell us a little about what you need..."></textarea>
             <div class="field-error" id="cMsgErr"></div>
           </div>
@@ -239,12 +242,12 @@
           <b>Pune, India</b>
           <p>Mon&#8211;Fri, 10:00&#8211;18:00 IST</p>
         </div>
-        <div class="lms-band" style="display: none;">
+        <div class="lms-band d-none">
           <div class="ck">Existing customers</div>
           <b>Looking for Flipick LMS?</b>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;position:relative">
-            <a class="btn btn-primary" href="#" style="background:#fff;color:var(--brand)">LMS sign in</a>
-            <a class="btn btn-ghost" href="#" style="border-color:rgba(255,255,255,.3);color:#fff">LMS support</a>
+          <div class="lms-band-btns">
+            <a class="btn btn-primary btn--lms-signin" href="#">LMS sign in</a>
+            <a class="btn btn-ghost btn--lms-ghost" href="#">LMS support</a>
           </div>
         </div>
       </div>
@@ -257,7 +260,7 @@
   <div class="wrap">
     <h2>Rather just <span class="serif-i">see it?</span></h2>
     <p>Book a demo and we'll take one of your briefs from screenplay to a measured campaign.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <div class="ctas-center">
       <a class="btn btn-primary" data-demo-link href="https://calendly.com/amol-chandsarkar/" target="_blank" rel="noopener noreferrer"><span class="tri"></span>Book a demo</a>
     </div>
   </div>

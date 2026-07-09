@@ -1,0 +1,52 @@
+# Flipick
+
+> Flipick is a learning-technology company founded in 2011 by Ravi Dugal, based in Pune, India. The platform serves 150,000+ active learners across enterprise clients including Pearson, IIBF, Godrej, Jindal Steel, IFC World Bank Group, and IICA.
+
+## Products
+
+### AI Video Platform (Flagship)
+Studio-grade AI video creation for L&D, marketing and customer teams. Create, personalise and distribute video — end to end.
+- Screenplay Creator and storyboard approval before rendering
+- Consistent characters and products across scenes
+- Variable Video Production (VVP): one master film, hundreds of personalised variants
+- Authenticated viewer tracking, completion and CTA analytics
+- Credit-based pricing: 1 credit = ₹1, base rate 3,300 credits per finished minute
+- URL: https://flipick.com/AI-video-platform
+
+### Flipick LMS G2
+AI skills-development platform covering the full learning lifecycle — content creation, engagement, adaptive assessment and analytics.
+- Zero-hallucination RAG assistant with source citations
+- GMAT-style adaptive assessments
+- Singapore Skills Framework integration for role-aligned learning
+- AI-powered course and question-bank generation
+- Talent-gap analytics and role-migration planning
+- URL: https://flipick.com/lms
+
+### PowerPoint to SCORM
+Converts existing PowerPoint decks into fully animated, narrated, assessed, SCORM-ready eLearning courses in approximately 15 days.
+- Input: PPT/PPTX, PDF, Word documents
+- Output: SCORM 1.2, MP4, xAPI reporting, LTI integration
+- Zero hallucination: every element derived from source documents, human-reviewed
+- Essentials from ₹1,50,000; Professional ₹2,50,000–₹4,00,000
+- URL: https://flipick.com/ppt-to-scorm
+
+## Pricing
+Credit-based, transparent pricing across both AI Video Creation and VVP Distribution.
+- 1 credit = ₹1
+- AI Video Creation: 3,300 credits/min base; typical 5,000–5,500/min with moderate edits
+- VVP Distribution: 50 credits/recipient (under 100) down to 20/recipient (10,000+)
+- No seats, no subscriptions
+- URL: https://flipick.com/pricing
+
+## Key pages
+- Homepage: https://flipick.com/
+- Solutions overview: https://flipick.com/solutions
+- How it works: https://flipick.com/how-it-works
+- Company and contact: https://flipick.com/company
+- Pricing: https://flipick.com/pricing
+
+## Contact
+- Sales: sales@flipick.com
+- Support: support@flipick.com
+- Office: Pune, India — Mon–Fri, 10:00–18:00 IST
+- Demos: https://flipick.com/company#contact
