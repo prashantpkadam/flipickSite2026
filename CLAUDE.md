@@ -92,6 +92,93 @@ Every page ends with a standard closing section:
 </section>
 ```
 
+### Campaign / landing pages
+
+Campaign pages (`ai-video-ld.html`, `ai-video-marketing.html`, `vvp-usa.html`) use a `.camp-hero` hero variant and section padding utilities:
+
+| Class | Purpose |
+|---|---|
+| `.vvp-section` | Standard section padding (48px 0) |
+| `.vvp-section-sm` | Compact section padding (28px 0) |
+| `.vvp-section-flush` | Minimal section padding (16px 0) |
+
+**Logo strip on campaign pages** — use `.section-pad-flush.section-bordered` (not `.section-white`) to get white background + bottom border, since campaign pages don't have a `section-white` following the logo strip:
+```html
+<section class="section-pad-flush section-bordered">
+  <div class="wrap">
+    <div class="logostrip logostrip-lg rv">...</div>
+  </div>
+</section>
+```
+
+### Grid system
+
+| Class | Desktop | Tablet (768–1023px) | Mobile (≤767px) |
+|---|---|---|---|
+| `.grid2` | 2 columns | 2 columns | 1 column |
+| `.grid3` | 3 columns | 2 columns | 1 column |
+| `.grid4` | 4 columns | 2 columns | 1 column |
+
+Do not add VVP-specific overrides for `.grid4` in the VVP responsive block — the global breakpoints already handle all three sizes correctly.
+
+### VVP interactive demo widget (`pages/vvp-usa.html`)
+
+The VVP USA page (`/vvp-usa`) has a live API-driven video generation demo. Key elements:
+
+```
+id="stage"   — .demostage container (9:16 portrait, aspect-ratio: 9/16, width: 280px)
+id="seg"     — .vvp-seg tab switcher (Retail / Communications)
+id="ldBar"   — progress bar element inside stage
+id="ldStatus"— loading message text
+id="ldCount" — countdown text (≈ 60s → ≈ 0s)
+```
+
+**API config (inline `<script>` in vvp-usa.html):**
+```javascript
+var API_BASE   = 'https://cinematic-1.onrender.com/api/v1/public';
+var API_KEY    = 'UlNEMTVARmxpcGlja0NpbmVtYXRpYw==';
+var PROJECT_ID = 'b98b6c06-55bf-4fc8-9160-1afbd467461a';
+```
+
+**Tab config (`CONF` object):**
+- `retail` — Dealer address / Dealer phone fields
+- `comms` — Policy/plan / Renewal date fields (Communications tab is hidden via `.hidden-tab` class on its button)
+
+**Loader:** `startPulse()` runs a 60-second linear countdown (`dur=60000, t0=Date.now()`). Updates every 200ms. Shows `≈ Ns` remaining.
+
+**Result display:** `showDone(mp4Url)` appends a `<video class="vvp-result-video">` element directly to `#stage`. This class uses `object-fit: cover` to fill the portrait container, and `object-fit: contain` in fullscreen (via `:fullscreen` pseudo-class) to preserve 9:16 ratio on landscape screens.
+
+**Polling:** After API submission, polls every 10s for render completion via `GET /renders/{id}`.
+
+**Key CSS classes for the demo widget:**
+| Class | Purpose |
+|---|---|
+| `.demostage` | 9:16 portrait container, `position:relative`, `overflow:hidden` |
+| `.demostage.loading` | Shows loading overlay (spinner, progress bar, status text) |
+| `.demostage.done` | Shows completion state |
+| `.vvp-demo` | Two-column grid: demostage left, form right. Stacks to single column at ≤820px. |
+| `.vvp-result-video` | Absolute-positioned video fills demostage; `contain` in fullscreen |
+| `.vvp-seg button.hidden-tab` | Hides a tab (Communications tab is hidden) |
+
+## Pages
+
+| Page | URL | Notes |
+|---|---|---|
+| `index.html` | `/` | Root page, absolute asset paths |
+| `pages/AI-video-platform.html` | `/ai-video-platform` | |
+| `pages/lms.html` | `/lms` | |
+| `pages/ppt-to-scorm.html` | `/ppt-to-scorm` | |
+| `pages/pricing.html` | `/pricing` | Has credit calculator |
+| `pages/solutions.html` | `/solutions` | |
+| `pages/how-it-works.html` | `/how-it-works` | |
+| `pages/company.html` | `/company` | |
+| `pages/lp-hr-ld.html` | `/lp-hr-ld` | Campaign LP |
+| `pages/ai-video-ld.html` | `/ai-video-ld` | Campaign LP |
+| `pages/ai-video-marketing.html` | `/ai-video-marketing` | Campaign LP |
+| `pages/vvp-usa.html` | `/vvp-usa` | VVP US campaign with live demo |
+| `pages/privacy.html` | `/privacy` | |
+| `pages/terms.html` | `/terms` | |
+
 ## Deployment
 
 - Hosted on Hostinger (shared Apache)
