@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "flipick-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "-p", "5501", "-c-1"],
+      "port": 5501
+    }
+  ]
+}

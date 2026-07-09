@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+*.suo
+*.user
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local dev
+node_modules/

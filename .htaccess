@@ -1,0 +1,23 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# --- Force HTTPS (uncomment when SSL is active on Hostinger) ---
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- 301 redirect old /pages/*.html URLs to clean paths ---
+# This ensures search engines and old bookmarks update to the new URLs.
+RewriteCond %{THE_REQUEST} \s/pages/([\w-]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# --- Serve clean URLs from /pages/*.html internally ---
+# /pricing → /pages/pricing.html, /lms → /pages/lms.html, etc.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/%{REQUEST_URI}.html -f
+RewriteRule ^([\w-]+)$ /pages/$1.html [L]
+
+# --- Handle trailing slash: /pricing/ → /pricing ---
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([\w-]+)/$ /$1 [R=301,L]
